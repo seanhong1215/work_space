@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "email": "sean1215@gmail.com",
+      "password": "$2a$10$0hNaLnLWektZJND.D1xluuHq6L1lnRnK5Fi9YuAszKrejTRnxR.6a",
+      "id": 1,
+      "role": "admin"
+    },
+    {
+      "email": "stanley215@gmail.com",
+      "password": "$2a$10$hzXmIBbiFnN0xSMnIcX03.5CC.oW8cF/8ORH2pjOpX.6LvHPlv.LK",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "shangbin@gmail.com",
+      "password": "$2a$10$HosLTXYfpjqpKPOJPgFxF.BrvfASCQcikKFdJtdA7m4EZ1/Ja1Tyy",
+      "role": "user",
+      "id": 3
+    }
+  ],
+  "carts": [],
+  "products": [
+    {
+      "title": "test",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "userId": 1,
+      "id": 1,
+      "email": "",
+      "createTime": "",
+      "updateTime": "",
+      "peopleCounts": "",
+      "price": "",
+      "storeHours": [
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "Label": ""
+        }
+      ],
+      "storeTables": [
+        {
+          "TableTypeNo": "",
+          "TableTypeName": "",
+          "TableCount": "",
+          "MaxPeople": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "Label": ""
+        }
+      ],
+      "stores": [
+        {
+          "typeNo": "",
+          "name": "",
+          "address": "",
+          "phone": "",
+          "photo": "",
+          "GoogleAddress": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "openTimeFrom": "",
+          "openTimeTo": ""
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "userId": 1,
+      "name": "",
+      "gender": "",
+      "email": "",
+      "phone": "",
+      "Password": "",
+      "birthday": "",
+      "address": "",
+      "profile": ""
+    }
+  ],
+  "records": [
+    {
+      "userId": 1,
+      "type": "",
+      "plan": ""
+    }
+  ]
+}

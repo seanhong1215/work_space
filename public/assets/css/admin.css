@@ -1,0 +1,208 @@
+
+
+
+/* ------------------------------------------------------ */
+
+.table-responsive {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  text-align: center;
+  display: grid;
+  border: 1px solid #D9D9D9;
+  /* grid-template-columns: 100px minmax(300px, 1fr); */
+  grid-template-columns: auto;
+  grid-template-rows: 2fr;
+  margin: 30px;
+  margin-top: 100px;
+}
+.table-responsive .header {
+  grid-column: 1/span 1;
+}
+.table-responsive .body {
+  grid-column: 2/-1;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1rem;
+}
+.table-responsive .body .rows {
+  position: relative;
+  min-width: 100px;
+  border-bottom: 0.5px solid #D9D9D9;
+}
+.table-responsive .body .rows:hover div[class*=col-] {
+  transition: color 0.2s ease;
+  z-index: 1;
+  color: #1f9bb7;
+}
+
+.table-responsive .footer {
+  grid-column: 1/-1;
+}
+.table-responsive .footer .rows {
+  text-align: center;
+}
+.table-responsive .header,
+.table-responsive .body,
+.table-responsive .footer {
+  padding-top: 1rem;
+}
+.table-responsive .header:not(.body),
+.table-responsive .body:not(.body),
+.table-responsive .footer:not(.body) {
+  color: #fff;
+  font-weight: 700;
+  background-color: #1f9bb7;
+}
+.table-responsive .header .rows,
+.table-responsive .body .rows,
+.table-responsive .footer .rows {
+  display: grid;
+  padding: 10px 0;
+  grid-gap: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.table-responsive .header .rows {
+  /* font-size: calc(2vw + 1rem); */
+  font-weight: 700;
+}
+@media (min-width: 800px) {
+  .table-responsive {
+    /* grid-template-columns: 5fr; */
+  }
+  .table-responsive .header {
+    grid-column: 1/-1;
+  }
+  .table-responsive .body {
+    grid-column: 1/-1;
+    grid-template-columns: 1fr;
+  }
+
+  .table-responsive .footer {
+    grid-column: 1/-1;
+  }
+
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .table-responsive .header .rows,
+.table-responsive .body .rows,
+.table-responsive .footer .rows {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.table-responsive .body .rows:last-child{
+  border-bottom: none;
+}
+
+
+/* ----------------------------login */
+
+#login, #signup{
+  background-color: #eee;
+}
+
+.formControls {
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  .formControls {
+    margin-left: 0;
+  }
+}
+
+.formControls .formControls_txt {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+  .formControls .formControls_txt {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+.formControls .formControls_label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin: 16px 0 4px 0;
+  width: 304px;
+}
+
+.formControls .formControls_input {
+  font-weight: normal;
+  border: none;
+  border-radius: 10px;
+  width: 304px;
+  padding: 12px 16px;
+  margin: 4px 0;
+}
+
+.formControls .formControls_input:focus {
+  outline: 3px solid #fff;
+}
+
+.formControls .formControls_input::-webkit-input-placeholder {
+  color: #9F9A91;
+}
+
+.formControls .formControls_input:-ms-input-placeholder {
+  color: #9F9A91;
+}
+
+.formControls .formControls_input::-ms-input-placeholder {
+  color: #9F9A91;
+}
+
+.formControls .formControls_input::placeholder {
+  color: #9F9A91;
+}
+
+.formControls .formControls_btnSubmit {
+  width: 128px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: #333333;
+  color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 24px 0;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.formControls a {
+  text-decoration: none;
+}
+
+.formControls span {
+  margin: 4px 0 16px 0;
+  color: #d87355;
+  font-size: 0.875rem;
+  width: 304px;
+}
+
+.formControls .formControls_btnLink {
+  display: block;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
