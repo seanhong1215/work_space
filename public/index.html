@@ -11,14 +11,22 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css" />
   </head>
   <body>
     <section class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">LOGO</a>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <h1>
+          <a href="./">
+            <img src="assets/images/logo.png" alt="logo">
+          </a>
+        </h1>
           <button
             class="navbar-toggler"
             type="button"
@@ -33,80 +41,42 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./">首頁</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="./space.html">主題空間</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./service.html">服務內容</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./login.html">會員專區</a>
+                <a class="nav-link" href="./admin/login.html">會員專區</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact_us.html">聯絡我們</a>
+                <a class="nav-link js-login-pages" href="./admin/login.html">登入</a>
               </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="./contact_us.html">聯絡我們</a>
+              </li> -->
             </ul>
           </div>
+        </nav>
+        <div class="banner">
+            <div class="banner-item">
+              <img
+                src="assets/images/banner.png"
+                class="d-block"
+                alt="夢想空間_01"
+              />
+            </div>
+            <div class="banner-txt">
+              愛上閱讀的夢想空間，讓工作與生活變得更自由
+            </div>
         </div>
-      </nav>
-    </section>
-    <section class="banner">
-      <div
-        id="carouselExampleControls"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="assets/images/banner_01.png"
-              class="d-block w-100"
-              alt="夢想空間_01"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/images/banner_02.png"
-              class="d-block w-100"
-              alt="夢想空間_02"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              src="assets/images/banner_03.png"
-              class="d-block w-100"
-              alt="夢想空間_03"
-            />
-          </div>
-          <p class="carousel-txt text-center">
-            愛上閱讀的夢想空間，讓工作與生活變得更自由
-            <span
-              >為您提供優良的空間環境、閱讀也可以變得很自由，體驗生活的不同樣貌
-            </span>
-          </p>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </section>
+    <div class="test">
+      <ul>
+        <li class="spaceTest"></li>
+      </ul>
+    </div>
     <section class="intro">
       <div class="container text-center">
         <h3>
@@ -118,105 +88,82 @@
         </p>
       </div>
     </section>
-    <section class="card">
-      <div class="container card-content row">
-        <div class="card col-4">
-          <img
-            src="assets/images/card_01.png"
-            class="card-img-top"
-            alt="空間照片_01"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+    <section class="work_space">
+      <div class="container card_content d-flex">
+        <div class="row">
+          <div class="card col-12">
+            <img
+              src="assets/images/card_01.png"
+              class="card-img-top"
+              alt="空間照片_01"
+            />
+          </div>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_02.png"
+              class="card-img-top"
+              alt="空間照片_02"
+            />
+          </div>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_03.png"
+              class="card-img-top"
+              alt="空間照片_03"
+            />
+
+          </div>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_17.png"
+              class="card-img-top"
+              alt="空間照片_03"
+            />
+          </div>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_16.png"
+              class="card-img-top"
+              alt="空間照片_03"
+            />
           </div>
         </div>
-        <div class="card col-4">
-          <img
-            src="assets/images/card_02.png"
-            class="card-img-top"
-            alt="空間照片_02"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+        <div class="row">
+          <div class="card col-12">
+            <img
+              src="assets/images/card_04.png"
+              class="card-img-top"
+              alt="空間照片_04"
+            />
           </div>
-        </div>
-        <div class="card col-4">
-          <img
-            src="assets/images/card_03.png"
-            class="card-img-top"
-            alt="空間照片_03"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_05.png"
+              class="card-img-top"
+              alt="空間照片_05"
+            />
           </div>
-        </div>
-        <div class="card col-4">
-          <img
-            src="assets/images/card_04.png"
-            class="card-img-top"
-            alt="空間照片_04"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_06.png"
+              class="card-img-top"
+              alt="空間照片_06"
+            />
           </div>
-        </div>
-        <div class="card col-4">
-          <img
-            src="assets/images/card_05.png"
-            class="card-img-top"
-            alt="空間照片_05"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_15.png"
+              class="card-img-top"
+              alt="空間照片_03"
+            />
           </div>
-        </div>
-        <div class="card col-4">
-          <img
-            src="assets/images/card_06.png"
-            class="card-img-top"
-            alt="空間照片_06"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title">空間照片</h5>
-            <p class="card-text">Co-working Space 辦公或閱讀環境</p>
+          <div class="card col-12">
+            <img
+              src="assets/images/card_14.png"
+              class="card-img-top"
+              alt="空間照片_03"
+            />
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="main">
-      <h2 class="title">主題空間</h2>
-      <div class="container main_content row">
-        <div class="card col-4">
-          <h3>商業活動 / 生活閱讀</h3>
-          <img
-            src="assets/images/card_07.png"
-            class="card-img-top"
-            alt="life_read"
-          />
-          <button class="more_btn">了解更多</button>
-        </div>
-        <div class="card col-4">
-          <h3>創作者交流聚會</h3>
-          <img
-            src="assets/images/card_08.png"
-            class="card-img-top"
-            alt="activity"
-          />
-          <button class="more_btn">了解更多</button>
-        </div>
-        <div class="card col-4">
-          <h3>複合式咖啡餐廳</h3>
-          <img
-            src="assets/images/card_09.png"
-            class="card-img-top"
-            alt="cafe"
-          />
-          <button class="more_btn">了解更多</button>
         </div>
       </div>
     </section>
@@ -225,155 +172,122 @@
       <div class="container service_content d-flex">
         <div class="row">
           <div class="card col-6">
-            <h3>
-              一人獨處小時光 X 小書房<br />
-              專屬於你的個人空間
-            </h3>
             <img
               src="assets/images/card_12.png"
               class="card-img-top"
               alt="生活閱讀"
             />
-            <button class="more_btn">了解更多</button>
-            <span class="card-body text-center">生活閱讀</span>
+            <div class="card-wrap">
+              <h3 class="card-body text-center">生活閱讀</h3>
+              <p class="card-txt">
+                一人獨處小時光 X 小書房<br />
+                專屬於你的個人空間
+              </p>
+              <button class="more_btn">了解更多</button>
+            </div>
           </div>
           <div class="card col-6">
-            <h3>
-              咖啡與餐廳的風味體驗空間 X 慢慢生活<br />
-              放慢腳步，打開五感親身感受
-            </h3>
             <img
               src="assets/images/card_13.png"
               class="card-img-top"
               alt="主題餐廳"
             />
-            <button class="more_btn">了解更多</button>
-            <span class="card-body text-center">主題餐廳</span>
+            <div class="card-wrap">
+              <h3 class="card-body text-center">主題餐廳</h3>
+              <p class="card-txt">
+                咖啡與餐廳的風味體驗空間 X 慢慢生活<br />
+                放慢腳步，打開五感親身感受
+              </p>
+              <button class="more_btn">了解更多</button>
+            </div>
           </div>
           <div class="card col-6">
-            <h3>
-              咖啡與餐廳的風味體驗空間 X 慢慢生活<br />
-              放慢腳步，打開五感親身感受
-            </h3>
             <img
               src="assets/images/card_11.png"
               class="card-img-top"
               alt="共享辦公"
             />
-            <button class="more_btn">了解更多</button>
-            <span class="card-body text-center">共享辦公</span>
+            <div class="card-wrap">
+              <h3 class="card-body text-center">共享辦公</h3>
+              <p class="card-txt">
+                咖啡與餐廳的風味體驗空間 X 慢慢生活<br />
+                放慢腳步，打開五感親身感受
+              </p>
+              <button class="more_btn">了解更多</button>
+            </div>
           </div>
           <div class="card col-6">
-            <h3>
-              生活閱讀 X 特色獨立書店<br />
-              找回閱讀的溫暖與快樂
-            </h3>
             <img
               src="assets/images/card_10.png"
               class="card-img-top"
               alt="獨立書店"
             />
-            <button class="more_btn">了解更多</button>
-            <span class="card-body text-center">獨立書店</span>
+            <div class="card-wrap">
+              <h3 class="card-body text-center">獨立書店</h3>
+              <p class="card-txt">
+                生活閱讀 X 特色獨立書店<br />
+                找回閱讀的溫暖與快樂
+              </p>
+              <button class="more_btn">了解更多</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="member">
       <h2 class="title">會員推薦</h2>
-      <div class="container row ">
+      <div class="container row">
         <div class="col-4 item">
+         
           <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
             超級棒的服務體驗，舒服又自在的環境，可以完全享受在閱讀中，專注力也比平常工作還要更集中，真心非常推薦大家一起加入會員。
           </p>
-          <span class="material-symbols-outlined">
-            person
-            </span>
+          <span class="material-symbols-outlined icon-person"> person </span>
         </div>
         <div class="col-4 item">
           <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
             很優質的閱讀場所，自從來了這裡之後，就沒再去過書局了，因為這邊比書局更大更舒服，可以完全享受在閱讀中，真心非常推薦大家一起加入會員。
           </p>
-          <span class="material-symbols-outlined">
-            person
-            </span>
+          <span class="material-symbols-outlined icon-person"> person </span>
         </div>
         <div class="col-4 item">
           <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
             超級棒的服務體驗，比任何的共享辦公還要棒，價格也很親民，適合上班族下班後可以來的地方，有時候也會舉辦很棒的活動，希望大家一起來交流認識。
           </p>
-          <span class="material-symbols-outlined">
-            person
-            </span>
+          <span class="material-symbols-outlined icon-person"> person </span>
         </div>
-        <div class="cardImg-content row">
-          <div class="card col-3">
-            <img
-              src="assets/images/card_14.png"
-              class="card-img-top"
-              alt=".空間照片"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">空間照片</h5>
-            </div>
-          </div>
-          <div class="card col-3">
-            <img
-              src="assets/images/card_15.png"
-              class="card-img-top"
-              alt=".空間照片"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">空間照片</h5>
-            </div>
-          </div>
-          <div class="card col-3">
-            <img
-              src="assets/images/card_16.png"
-              class="card-img-top"
-              alt="空間照片"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">空間照片</h5>
-            </div>
-          </div>
-          <div class="card col-3">
-            <img
-              src="assets/images/card_17.png"
-              class="card-img-top"
-              alt="空間照片"
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">空間照片</h5>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+
     </section>
     <section class="contact">
       <h2 class="title">聯絡我們</h2>
       <div class="container row">
-
         <div class="col-6">
-          <img src="assets/images/contact_us.jpg" class="card-img-top" alt="map" />
+          <img
+            src="assets/images/contact_us.jpg"
+            class="card-img-top"
+            alt="map"
+          />
         </div>
         <form class="col-6">
           <div class="form_item mb-3">
@@ -423,13 +337,17 @@
       </div>
     </section>
     <section class="footer">
-      <div class="content d-flex justify-content-between">
-        <div class="logo">LOGO</div>
+      <div class="container f-bottom">
+        <div class="logo">
+          <span href="./">
+            <img src="assets/images/f-logo.png" alt="logo">
+          </span>
+        </div>
         <div class="info">
           <ul>
             <li>Address: 123 Beverly Hill, New York, USA</li>
-            <li>Phone: 0923 - 456 - 789</li>
             <li>Email: BookStoreDesign@gmail.com</li>
+            <li>Phone: 0923 - 456 - 789</li>
             <li>© 2022 TAIWAN 空間設計. All rights reserved.</li>
           </ul>
         </div>
@@ -440,6 +358,8 @@
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="assets/js/all.js"></script>
+    <script src="assets/js/admin.js"></script>
   </body>
 </html>

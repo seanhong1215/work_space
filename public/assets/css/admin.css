@@ -1,4 +1,30 @@
-
+.header {
+  background-color: rgb(114,141,129);
+}
+.navbar-nav .nav-item .nav-link {
+  font-size: 20px;
+  line-height: 150%;
+  color: #fff;
+  font-weight: 500;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .2s;
+  color: rgb(84,97,90);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/login.png);
+    width: 100%;
+    height: 1080px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /* ------------------------------------------------------ */

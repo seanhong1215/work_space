@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <!-- <meta name="theme-color" content="#7952b3" /> -->
 
-    <title>Signup | Dashboard</title>
+    <title>Signup</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -27,35 +27,48 @@
   </head>
 
   <body class="d-flex flex-column justify-content-center h-100" id="signup">
-    <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-        <section class="container-fluid">
-          <!-- <a href="/" class="navbar-brand">這是後台首頁</a> -->
-  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-            aria-expanded="false" aria-label="Toggle navigation">
+    <section class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <h1>
+          <a href="../../">
+            <img src="../assets/images/logo.png" alt="logo">
+          </a>
+        </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-  
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"></a>
+                <a class="nav-link" href="../space.html">主題空間</a>
               </li>
-  
+              <li class="nav-item">
+                <a class="nav-link" href="../service.html">服務內容</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./admin/login.html">會員專區</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact_us.html">聯絡我們</a>
+              </li>
             </ul>
           </div>
-        </section>
-      </nav>
-    </header>
-  
-    <!-- Begin page content -->
-    <main class="flex-shrink-0">
+        </nav>
+      </div>
+    </section>
+    <main>
       <div class="container py-5">
         <form class="formControls js-form-signup" action="POST">
-          <h2 class="formControls_txt">後台註冊</h2>
+          <h2 class="formControls_txt">註冊</h2>
           <label class="formControls_label" for="exampleInputEmail1">Email</label>
           <input class="formControls_input" type="text" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="請輸入 email" required>
           <span>此欄位不可留空</span>
@@ -69,24 +82,7 @@
           <a class="formControls_btnLink" href="./login.html">登入</a>
       </form>
       </div>
-  
-      <pre class="js-msg"></pre>
     </main>
-  
-  
-
-      </div>
-
-      <pre class="js-msg"></pre>
-    </main>
-
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <!-- <a class="nav-link text-muted" href="/admin">前往後台</a> -->
-      </div>
-    </footer>
-    <!-- end of DOM -->
-
     <!-- Bootstrap5 JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
