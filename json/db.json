@@ -209,13 +209,89 @@
           "storeNo": "",
           "CreateTime": "",
           "UpdateTime": "",
-          "Label": ""
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期日",
+          "Weekday": 0
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期一",
+          "Weekday": 1
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期二",
+          "Weekday": 2
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期三",
+          "Weekday": 3
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期四",
+          "Weekday": 4
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期五",
+          "Weekday": 5
+        },
+        {
+          "storeNo": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "OpenTimeFrom": "08:30",
+          "OpenTimeTo": "21:30",
+          "Label": "星期六",
+          "Weekday": 6
         }
+
       ],
       "storeTables": [
         {
           "TableTypeNo": "",
-          "TableTypeName": "",
+          "TableTypeName": "單人座",
+          "TableCount": "",
+          "MaxPeople": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "Label": ""
+        },
+        {
+          "TableTypeNo": "",
+          "TableTypeName": "雙人座",
+          "TableCount": "",
+          "MaxPeople": "",
+          "CreateTime": "",
+          "UpdateTime": "",
+          "Label": ""
+        },
+        {
+          "TableTypeNo": "",
+          "TableTypeName": "四人座",
           "TableCount": "",
           "MaxPeople": "",
           "CreateTime": "",

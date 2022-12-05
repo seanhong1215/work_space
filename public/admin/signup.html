@@ -55,17 +55,26 @@
                 <a class="nav-link" href="../service.html">服務內容</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./admin/login.html">會員專區</a>
+                <a class="nav-link" href="../order.html">預約專區</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  會員專區
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../setting.html">個人資料</a></li>
+                  <li><a class="dropdown-item" href="../order_list.html">我的預約</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../contact_us.html">聯絡我們</a>
+                <a class="nav-link js-login-pages" href="./login.html">登入</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </section>
-    <main>
+    <main class="main-body">
       <div class="container py-5">
         <form class="formControls js-form-signup" action="POST">
           <h2 class="formControls_txt">註冊</h2>
@@ -89,80 +98,15 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-
+    <script src="../assets/js/admin.js"></script>
     <script>
-      // const BASE_URL = 'http://localhost:3000';
-      // const BASE_SIGNUP_URL = `${BASE_URL}/signup`;
-      const SIGNUP_URL = "/signup";
-
-      const domMsg = document.querySelector(".js-msg");
-      const btnSignup = document.querySelector(".js-btn-signup");
-      const form = document.querySelector(".js-form-signup");
-      /* end of definition */
-
-      function saveUserToLocal({ accessToken, user }) {
-        localStorage.setItem("token", accessToken);
-        localStorage.setItem("userId", user.id);
-      }
-      /* end of saveUserToLocal() */
-
-      /**
-       * #Step-1: `POST` data to API
-       */
-      function signup() {
-        console.log("Signup!");
-
-        const url = `${SIGNUP_URL}`;
-        // const data = {
-        //   email: 'dev3@dev.me',
-        //   password: '12345678',
-        // };
-        const data = {
-          email: form.email.value.trim(),
-          password: form.password.value.trim(),
-        };
-
-        const hasInput = data.email && data.password;
-        if (hasInput) {
-          return axios
-            .post(url, data)
-            .then(function (response) {
-              console.log("signup:::", JSON.stringify(response, null, 2));
-
-              domMsg.innerHTML = response.statusText;
-
-              if (response.status === 201) {
-                saveUserToLocal(response.data);
-                window.location.replace("/admin/login.html");
-              }
-              /*  end of IF-OK */
-            })
-            .catch(function (error) {
-              console.log("error:::", JSON.stringify(error, null, 2));
-
-              domMsg.innerHTML = error?.response?.data || error;
-            });
-          /*  end of axios */
-        }
-        /* end of IF-hasInput */
-
-        domMsg.innerHTML = "pls input data";
-      }
-      /* end of signup() */
-
-      /**
-       * #Step-0: after page refresh
-       */
       function init() {
         btnSignup.addEventListener("click", () => signup());
       }
       /* end of init() */
 
-      // MAIN
       init();
     </script>
-    <!-- end of script -->
   </body>
 </html>

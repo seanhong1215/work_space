@@ -44,10 +44,16 @@
               <a class="nav-link" href="../service.html">服務內容</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">預約專區</a>
+              <a class="nav-link" href="../order.html">預約專區</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact_us.html">聯絡我們</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                會員專區
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../setting.html">個人資料</a></li>
+                <li><a class="dropdown-item" href="../order_list.html">我的預約</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link js-login-pages" href="./login.html">登入</a>
@@ -57,7 +63,7 @@
       </nav>
     </div>
   </section>
-  <main>
+  <main class="main-body">
     <div class="container py-5">
       <form class="formControls js-form-login" action="POST">
         <h2 class="formControls_txt">登入</h2>
@@ -84,7 +90,6 @@
     }
     /* end of init() */
 
-    // MAIN
     init();
   </script>
 </body>

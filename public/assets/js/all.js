@@ -34,3 +34,23 @@ function renderData(){
   })
   spaceTest.innerHTML = str;
 }
+
+
+
+
+const elem = document.querySelector('input[name="foo"]');
+const datepicker = new Datepicker(elem, {
+  format: 'yyyy-mm-dd'
+}); 
+
+const add = document.querySelector('.add');
+const remove = document.querySelector('.remove');
+let num = document.querySelector('.num');
+add.addEventListener('click', function(e){
+  e.preventDefault();
+  num ++;
+})
+remove.addEventListener('click', function(e){
+  e.preventDefault();
+  num --;
+})

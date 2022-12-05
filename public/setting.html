@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>個人資料</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/all.css" />
+  </head>
+  <body>
+    <section class="header setting_header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <h1>
+            <a href="./">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+          </h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./space.html">主題空間</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./service.html">服務內容</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./order.html">預約專區</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  會員專區
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="./setting.html">個人資料</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./order_list.html"
+                      >我的預約</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-login-pages" href="./admin/login.html"
+                  >登入</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="space-banner-txt text-center">個人資料</div>
+      </div>
+    </section>
+    <section class="setting">
+      <div class="container">
+        <div class="row">
+          <form class="col-12">
+            <div class="form_item mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="form_item mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >姓名</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput2"
+                placeholder="請輸入姓名或暱稱"
+              />
+            </div>
+            <div class="form_item mb-3">
+              <label for="exampleFormControlInput3" class="form-label"
+                >手機號碼</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput3"
+                placeholder="請輸入手機號碼"
+              />
+            </div>
+            <div class="form_item mb-3">
+              <label for="exampleFormControlInput4" class="form-label"
+                >生日</label
+              >
+              <input
+                type="text"
+                name="foo"
+                id="exampleFormControlInput4"
+                class="form-control"
+                placeholder="請輸入生日"
+              />
+            </div>
+            <button type="button" class="btn btn-primary save w-100">儲存</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container f-bottom">
+        <div class="logo">
+          <span href="./">
+            <img src="assets/images/f-logo.png" alt="logo" />
+          </span>
+        </div>
+        <div class="info">
+          <ul>
+            <li>Address: 123 Beverly Hill, New York, USA</li>
+            <li>Email: BookStoreDesign@gmail.com</li>
+            <li>Phone: 0923 - 456 - 789</li>
+            <li>© 2022 TAIWAN 空間設計. All rights reserved.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/all.js"></script>
+  </body>
+</html>

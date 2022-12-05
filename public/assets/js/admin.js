@@ -2,7 +2,7 @@
     // const LOGIN_URL = `${BASE_URL}/login`;
     const LOGIN_URL = '/login';
     const btnLogin = document.querySelector('.js-btn-login');
-    const form = document.querySelector('.js-form-login');
+    const formLogin = document.querySelector('.js-form-login');
     const loginPages = document.querySelector('.js-login-pages');
     
     /* end of definition */
@@ -24,8 +24,8 @@
       //   password: '12345678',
       // };
       const data = {
-        email: form.email.value.trim(),
-        password: form.password.value.trim(),
+        email: formLogin.email.value.trim(),
+        password: formLogin.password.value.trim(),
       };
 
       const hasInput = data.email && data.password;
@@ -53,7 +53,57 @@
     }
     /* end of login() */
 
-    /**
-     * #Step-0: after page refresh
-     */
-   
+
+
+     // const BASE_URL = 'http://localhost:3000';
+      // const BASE_SIGNUP_URL = `${BASE_URL}/signup`;
+      const SIGNUP_URL = "/signup";
+
+      const domMsg = document.querySelector(".js-msg");
+      const btnSignup = document.querySelector(".js-btn-signup");
+      const formSignup = document.querySelector(".js-form-signup");
+      /* end of definition */
+
+      function saveUserToLocal({ accessToken, user }) {
+        localStorage.setItem("token", accessToken);
+        localStorage.setItem("userId", user.id);
+      }
+      /* end of saveUserToLocal() */
+
+
+      function signup() {
+        console.log("Signup!");
+
+        const url = `${SIGNUP_URL}`;
+        // const data = {
+        //   email: 'dev3@dev.me',
+        //   password: '12345678',
+        // };
+        const data = {
+          email: formSignup.email.value.trim(),
+          password: formSignup.password.value.trim(),
+        };
+
+        const hasInput = data.email && data.password;
+        if (hasInput) {
+          return axios
+            .post(url, data)
+            .then(function (response) {
+              console.log("signup:::", JSON.stringify(response, null, 2));
+
+              domMsg.innerHTML = response.statusText;
+
+              if (response.status === 201) {
+                saveUserToLocal(response.data);
+                window.location.replace("/admin/login.html");
+              }
+            })
+            .catch(function (error) {
+              console.log("error:::", JSON.stringify(error, null, 2));
+
+              domMsg.innerHTML = error?.response?.data || error;
+            });
+          /*  end of axios */
+        }
+      }
+      /* end of signup() */

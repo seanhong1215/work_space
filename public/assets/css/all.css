@@ -110,10 +110,11 @@ body {
 }
 .service_content .card-txt {
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 2px;
   margin-bottom: 0;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .service_content .card .card-wrap {
@@ -129,11 +130,11 @@ body {
 }
 
 .service_content .card .more_btn {
-  padding: 12px 32px;
+  padding: 8px 32px;
   border-radius: 8px;
   border:1px solid rgb(114,141,129);
   color: rgb(114,141,129);
-  font-size: 24px;
+  font-size: 20px;
   display: block;
   margin: 20px auto;
   background-color: transparent;
@@ -145,7 +146,7 @@ body {
 }
 
 section .title{
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
   font-weight: 600;
   padding-bottom: 80px;
@@ -155,7 +156,7 @@ section .title::after {
   content: '';
   position: absolute;
   margin: auto;
-  bottom: 50px;
+  bottom: 75px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
@@ -163,12 +164,6 @@ section .title::after {
   height: 3px;
 }
 
-/* .main_content .card h3{
-  text-align: center;
-  font-size: 32px;
-  padding: 16px 0;
-  margin-bottom: 0;
-} */
 
 .member {
   padding: 60px 0;
@@ -333,13 +328,15 @@ section .title::after {
   line-height: 1.5;
   letter-spacing: 1.5px;
   margin-bottom: 30px;
+  font-weight: 400;
+
 }
 .theme_space .item {
   border: 1px solid #d9d9d9;
 }
 
 .space_intro {
-  padding-top: 30px;
+  padding: 30px 0;
   font-size: 24px;
   font-weight: 500;
 }
@@ -358,7 +355,7 @@ section .title::after {
 .theme_space .item .card-wrap .card-body, 
 .price_reading .item .card-wrap .card-body{
   padding: 15px 0;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
 }
 .theme_space .item .card-wrap .card-txt, 
@@ -378,11 +375,11 @@ section .title::after {
 
 
 .theme_space .item .card-wrap .more_btn{
-  padding: 12px 32px;
+  padding: 8px 32px;
   border-radius: 8px;
   border:1px solid rgb(114,141,129);
   color: rgb(114,141,129);
-  font-size: 24px;
+  font-size: 20px;
   display: block;
   margin: 20px auto;
   background-color: transparent;
@@ -450,16 +447,80 @@ section .title::after {
   transition: .3s;
 }
 
-/* ---------------------------contact--------------------- */
-.contact_header {
-  background: url(../images/space_member.png);
+/* ---------------------------setting--------------------- */
+.setting_header {
+  background: url(../images/setting.png);
   width: 100%;
   height: 450px;
   position: relative;
 }
-.member_space{
+.setting{
   padding: 60px 0;
 }
-.member_space .container {
-  max-width: 1024px;
+.setting .container {
+  max-width: 640px;
+}
+.save {
+  padding: 4px 24px;
+  border-radius: 8px;
+  bottom: 20px;
+  background-color: transparent;
+  border:1px solid rgb(114,141,129);
+  color: rgb(114,141,129);
+  font-size: 24px;
+  margin: auto;
+  cursor: pointer;
+}
+.save:hover {
+  background-color: rgb(114,141,129);
+  border:1px solid rgb(114,141,129);
+  color: #fff;
+  transition: .3s;
+}
+
+/* ---------------------------setting--------------------- */
+.order_list_header {
+  background: url(../images/order_list.png);
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+.order_list_space{
+  padding: 60px 0;
+  background-color: #f4f4f4;
+}
+.order_list_space h4 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.order_list_space .list {
+  padding: 0 50px;
+}
+.order_list_space .list li{
+  padding: 8px 0;
+}
+.order_list {
+  background-color: #fff;
+  box-shadow:0 2px 2px rgba(255,255,255, .7);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+/* ---------------------------order--------------------- */
+.order_header {
+  background: url(../images/order.png);
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+.order form {
+  padding: 80px 0;
+}
+.cartAmount-icon {
+  padding: 5px;
+}
+
+.num {
+  text-align: center;
 }
