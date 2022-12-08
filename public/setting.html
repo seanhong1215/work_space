@@ -49,7 +49,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="./order.html">預約專區</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="members" style="display: none">
                 <a
                   class="nav-link"
                   href="#"
@@ -102,7 +102,7 @@
                 >姓名</label
               >
               <input
-                type="email"
+                type="text"
                 class="form-control"
                 id="exampleFormControlInput2"
                 placeholder="請輸入姓名或暱稱"
@@ -113,7 +113,7 @@
                 >手機號碼</label
               >
               <input
-                type="email"
+                type="number"
                 class="form-control"
                 id="exampleFormControlInput3"
                 placeholder="請輸入手機號碼"
@@ -124,14 +124,16 @@
                 >生日</label
               >
               <input
-                type="text"
+                type="date"
                 name="foo"
                 id="exampleFormControlInput4"
                 class="form-control"
                 placeholder="請輸入生日"
               />
             </div>
-            <button type="button" class="btn btn-primary save w-100">儲存</button>
+            <button type="button" class="btn btn-primary save w-100">
+              儲存
+            </button>
           </form>
         </div>
       </div>
@@ -160,6 +162,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="assets/js/account.js"></script>
     <script src="assets/js/all.js"></script>
   </body>
 </html>

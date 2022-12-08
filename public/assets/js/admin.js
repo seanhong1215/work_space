@@ -19,10 +19,6 @@
     function login() {
       console.log('Login!');
       const url = `${LOGIN_URL}`;
-      // const data = {
-      //   email: 'dev@admin.me',
-      //   password: '12345678',
-      // };
       const data = {
         email: formLogin.email.value.trim(),
         password: formLogin.password.value.trim(),
@@ -37,10 +33,23 @@
             const role = response.data.user.role
             if (response.status === 200 && role === "admin") {
               saveUserToLocal(response.data);
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '登入成功',
+                showConfirmButton: false,
+                timer: 1500
+              });
               window.location.replace('/admin');
             } else if(response.status === 200 && role === "user") {
               saveUserToLocal(response.data);
-              loginPages.innerHTML = "登出"
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '登入成功',
+                showConfirmButton: false,
+                timer: 1500
+              });
               window.location.replace('/');
             }
             /* end of response.OK */
@@ -52,7 +61,6 @@
       }
     }
     /* end of login() */
-
 
 
      // const BASE_URL = 'http://localhost:3000';
@@ -73,12 +81,8 @@
 
       function signup() {
         console.log("Signup!");
-
         const url = `${SIGNUP_URL}`;
-        // const data = {
-        //   email: 'dev3@dev.me',
-        //   password: '12345678',
-        // };
+
         const data = {
           email: formSignup.email.value.trim(),
           password: formSignup.password.value.trim(),
@@ -95,6 +99,13 @@
 
               if (response.status === 201) {
                 saveUserToLocal(response.data);
+                Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: '註冊成功',
+                  showConfirmButton: false,
+                  timer: 1500
+                });
                 window.location.replace("/admin/login.html");
               }
             })
