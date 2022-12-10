@@ -15,7 +15,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/all.css" />
   </head>
   <body>
@@ -23,10 +24,10 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <h1>
-          <a href="./">
-            <img src="assets/images/logo.png" alt="logo">
-          </a>
-        </h1>
+            <a href="./">
+              <img src="assets/images/logo.png" alt="logo" />
+            </a>
+          </h1>
           <button
             class="navbar-toggler"
             type="button"
@@ -49,23 +50,38 @@
               <li class="nav-item">
                 <a class="nav-link" href="./order.html">預約專區</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown" id="members" style="display: none">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   會員專區
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="./setting.html">個人資料</a></li>
-                  <li><a class="dropdown-item" href="./order_list.html">我的預約</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./setting.html">個人資料</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./order_list.html"
+                      >我的預約</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-login-pages" href="./admin/login.html">登入</a>
+                <a class="nav-link js-login-pages" href="./admin/login.html"
+                  >登入</a
+                >
               </li>
             </ul>
           </div>
         </nav>
-          <div class="space-banner-txt text-center">主題空間</div>
-          </div>
+        <div class="space-banner-txt text-center">主題空間</div>
+      </div>
     </section>
     <section class="space_intro">
       <div class="container text-center">
@@ -75,287 +91,81 @@
       </div>
     </section>
     <div class="theme_space">
-    <section class="life_reading">
-      <div class="container">
-        <h2 class="title">商業活動 / 生活閱讀</h2>
-        <p class="content">在生活空間環繞下，可以「體驗」到非日常，慢慢生活的步調。書店的空間中，提供不同主題的特色場景與空間設計，讓你體驗充滿藝術文化氣息的特別時光。
-          我們也會不定時舉辦各種活動、講座、及工作坊等各種活動。</p>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/life_reading_01.png"
-                class="card-img-top"
-                alt="life_reading_01"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活閱讀</h3>
-                <p class="card-txt">
-                  慢慢生活 X 小書房<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/life_reading_02.png"
-                class="card-img-top"
-                alt="life_reading_02"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活閱讀</h3>
-                <p class="card-txt">
-                  特色場景 X 小書房<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/life_reading_03.png"
-                class="card-img-top"
-                alt="life_reading_03"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活閱讀</h3>
-                <p class="card-txt">
-                  空間設計 X 小書房<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/life_reading_04.png"
-                class="card-img-top"
-                alt="life_reading_04"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活閱讀</h3>
-                <p class="card-txt">
-                  藝術文化 X 小書房<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="creator">
-      <div class="container">
-        <h2 class="title">創作者交流聚會</h2>
-        <p class="content">帶來創新靈感的獨立創作者空間
-          ，讓生活變得更自由，帶有個人風格的工作方式<br>
-          在這個數位時代，需要更多的創意工作者獲得刺激，並激發靈感的場所。<br>
-          我們不只提供舒適的工作環境，也提供免費飲品、以自助餐廳形式客製化每個人的需求。
+      <section class="life_reading">
+        <div class="container">
+          <h2 class="title">商業活動 / 生活閱讀</h2>
+          <p class="content">
+            在生活空間環繞下，可以「體驗」到非日常，慢慢生活的步調。書店的空間中，提供不同主題的特色場景與空間設計，讓你體驗充滿藝術文化氣息的特別時光。
+            我們也會不定時舉辦各種活動、講座、及工作坊等各種活動。
           </p>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/creator_01.png"
-                class="card-img-top"
-                alt="creator_01"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">創作者交流</h3>
-                <p class="card-txt">
-                  獨立創作者 X 個人風格靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
+          <div class="row space_life">
+             <!-- loading... -->
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/creator_02.png"
-                class="card-img-top"
-                alt="creator_02"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">創作者交流</h3>
-                <p class="card-txt">
-                  獨立創作者 X 個人風格靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
+        </div>
+      </section>
+      <section class="creator">
+        <div class="container">
+          <h2 class="title">創作者交流聚會</h2>
+          <p class="content">
+            帶來創新靈感的獨立創作者空間
+            ，讓生活變得更自由，帶有個人風格的工作方式<br />
+            在這個數位時代，需要更多的創意工作者獲得刺激，並激發靈感的場所。<br />
+            我們不只提供舒適的工作環境，也提供免費飲品、以自助餐廳形式客製化每個人的需求。
+          </p>
+          <div class="row space_creator">
+             <!-- loading... -->
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/creator_03.png"
-                class="card-img-top"
-                alt="creator_03"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">創作者交流</h3>
-                <p class="card-txt">
-                  獨立創作者 X 個人風格靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
+        </div>
+      </section>
+      <section class="coffee_restaurant">
+        <div class="container">
+          <h2 class="title">複合式咖啡餐廳</h2>
+          <p class="content">
+            每個月我們都會請來不同的廚師，客製化VIP我們的會員，想吃什麼，想點什麼、很自由的都能滿足你的慾望，一個你不論是朋友聚會、聚餐、辦公、商務等，都很適合的空間場所，台灣也逐漸發展出多種樣態，也鼓勵並製造機會讓會員們透過不同方式認識與交流，讓每個空間都更有創意的靈感。
+          </p>
+          <div class="row space_coffee">
+             <!-- loading... -->
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/creator_04.png"
-                class="card-img-top"
-                alt="creator_04"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活閱讀</h3>
-                <p class="card-txt">
-                  獨立創作者 X 個人風格靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
+        </div>
+      </section>
+    </div>
+    <section class="space">
+      <div class="space_img w-100">
+        <img
+          src="assets/images/space.png"
+          class="card-img-top"
+          alt="空間預約"
+        />
+        <button class="more_btn cart">立刻預訂屬於你獨一無二的空間</button>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container f-bottom">
+        <div class="logo">
+          <span href="./">
+            <img src="assets/images/f-logo.png" alt="logo" />
+          </span>
+        </div>
+        <div class="info">
+          <ul>
+            <li>Address: 123 Beverly Hill, New York, USA</li>
+            <li>Email: BookStoreDesign@gmail.com</li>
+            <li>Phone: 0923 - 456 - 789</li>
+            <li>© 2022 TAIWAN 空間設計. All rights reserved.</li>
+          </ul>
         </div>
       </div>
     </section>
-    <section class="coffee_restaurant">
-      <div class="container">
-        <h2 class="title">複合式咖啡餐廳</h2>
-        <p class="content">每個月我們都會請來不同的廚師，客製化VIP我們的會員，想吃什麼，想點什麼、很自由的都能滿足你的慾望，一個你不論是朋友聚會、聚餐、辦公、商務等，都很適合的空間場所，台灣也逐漸發展出多種樣態，也鼓勵並製造機會讓會員們透過不同方式認識與交流，讓每個空間都更有創意的靈感。</p>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/coffee_restaurant_01.png"
-                class="card-img-top"
-                alt="複合式咖啡_01"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">複合式咖啡</h3>
-                <p class="card-txt">
-                  自由聚餐 X 創意靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/coffee_restaurant_02.png"
-                class="card-img-top"
-                alt="複合式咖啡_02"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">複合式咖啡</h3>
-                <p class="card-txt">
-                  自由辦公 X 創意靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/coffee_restaurant_03.png"
-                class="card-img-top"
-                alt="複合式咖啡_03"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">複合式咖啡</h3>
-                <p class="card-txt">
-                  自由商務 X 創意靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 ">
-            <div class="item">
-              <img
-                src="assets/images/coffee_restaurant_04.png"
-                class="card-img-top"
-                alt="複合式咖啡_04"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">複合式咖啡</h3>
-                <p class="card-txt">
-                  自由交流 X 創意靈感<br />
-                  專屬於你的個人空間
-                </p>
-                <button class="more_btn">了解更多</button>
-              
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-  <section class="space">
-    <div class="space_img w-100">
-      <img
-        src="assets/images/space.png"
-        class="card-img-top"
-        alt="空間預約"
-      />
-      <button class="more_btn">立刻預訂屬於你獨一無二的空間</button>
-    </div>
-  </section>
-  <section class="footer">
-    <div class="container f-bottom">
-      <div class="logo">
-        <span href="./">
-          <img src="assets/images/f-logo.png" alt="logo">
-        </span>
-      </div>
-      <div class="info">
-        <ul>
-          <li>Address: 123 Beverly Hill, New York, USA</li>
-          <li>Email: BookStoreDesign@gmail.com</li>
-          <li>Phone: 0923 - 456 - 789</li>
-          <li>© 2022 TAIWAN 空間設計. All rights reserved.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/all.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/account.js"></script>
-
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/space.js"></script>
   </body>
 </html>

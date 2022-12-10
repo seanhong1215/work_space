@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css" />
   </head>
@@ -49,7 +50,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="./order.html">預約專區</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown" id="members" style="display: none;">
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   會員專區
                 </a>
@@ -69,127 +70,8 @@
     </section>
     <section class="price_reading">
       <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_01.png"
-                class="card-img-top"
-                alt="workspace_01"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_02.png"
-                class="card-img-top"
-                alt="workspace_02"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_03.png"
-                class="card-img-top"
-                alt="workspace_03"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_04.png"
-                class="card-img-top"
-                alt="workspace_04"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_05.png"
-                class="card-img-top"
-                alt="workspace_05"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_06.png"
-                class="card-img-top"
-                alt="workspace_06"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_07.png"
-                class="card-img-top"
-                alt="workspace_07"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3 ">
-                <div class="item">
-              <img
-                src="assets/images/workspace_08.png"
-                class="card-img-top"
-                alt="workspace_08"
-              />
-                 <div class="card-wrap">
-                <h3 class="card-body text-center">生活空間</h3>
-                <p class="card-txt">
-                  專屬於你的個人空間
-                </p>
-            </div>
-            </div>
-              </div>
+            <div class="row space_life">
+             <!-- loading... -->
             </div>
       </div>
     </section>
@@ -203,7 +85,7 @@
                 <h5 class="card-title">100元 / 日</h5>
                 <small class="subTitle">體驗方案</small>
                 <p class="card-text">將由專人導覽解說，帶你認識環境、了解每個空間的服務，你也可以自由的體驗。</p>
-                <div class="more_btn">立刻預約</div>
+                <div class="more_btn cart">立刻預約</div>
               </div>
             </div>
           </div>
@@ -213,7 +95,7 @@
                 <h5 class="card-title">1990元 / 日</h5>
                 <small class="subTitle">一般方案</small>
                 <p class="card-text">專屬個人空間服務，你可以享用生活空間及獨立書店裡面所有的空間服務。</p>
-                <div class="more_btn">立刻預約</div>
+                <div class="more_btn cart">立刻預約</div>
               </div>
             </div>
           </div>
@@ -223,7 +105,7 @@
                 <h5 class="card-title">2990元 / 日</h5>
                 <small class="subTitle">自由方案</small>
                 <p class="card-text">這是為獨立創作工作者提供的方案，您可以自由使用所有的空間服務。</p>
-                <div class="more_btn">立刻預約</div>
+                <div class="more_btn cart">立刻預約</div>
               </div>
             </div>
           </div>
@@ -238,7 +120,7 @@
           class="card-img-top"
           alt="空間預約"
         />
-        <button class="more_btn">立刻預訂屬於你獨一無二的空間</button>
+        <button class="more_btn cart">立刻預訂屬於你獨一無二的空間</button>
       </div>
     </section>
     <section class="footer">
@@ -263,8 +145,11 @@
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/all.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/account.js"></script>
-
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/service.js"></script>
   </body>
 </html>

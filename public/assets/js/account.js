@@ -1,18 +1,16 @@
 const loginPages = document.querySelector('.js-login-pages');
 const member = document.querySelector('#members');
 
-const token = localStorage.getItem("token");
+const token = localStorage.getItem('token');
 const userId = localStorage.getItem('userId');
 
 function init () {
   if(token) {
-    loginPages.innerHTML = "登出";
+    loginPages.innerHTML = '登出';
     member.style.display = 'block';
   }
   loginPages.addEventListener('click', function(e){
     e.preventDefault();
-    // console.log(e.target)
-    // // console.dir(e.target)
     if(e.target.innerHTML === '登出'){
       localStorage.clear();
       Swal.fire({

@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -65,18 +66,55 @@
             </ul>
           </div>
         </nav>
-        <div class="space-banner-txt text-center">會員預約</div>
+        <div class="space-banner-txt text-center">價格方案</div>
           </div>
+      </div>
+    </section>
+    <section class="price">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="item">
+              <img class="img" src="https://seanhong1215.github.io/workspace/images/card_01.png" alt="">
+              <div class="card-body text-center">
+                <h5 class="card-title">100元 / 日</h5>
+                <small class="subTitle">體驗方案</small>
+                <p class="card-text">將由專人導覽解說，帶你認識環境、了解每個空間的服務，你也可以自由的體驗。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 ">
+            <div class="item">
+              <img class="img" src="https://seanhong1215.github.io/workspace/images/card_02.png" alt="">
+              <div class="card-body text-center">
+                <h5 class="card-title">1990元 / 日</h5>
+                <small class="subTitle">一般方案</small>
+                <p class="card-text">專屬個人空間服務，你可以享用生活空間及獨立書店裡面所有的空間服務。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 ">
+            <div class="item">
+              <img class="img" src="https://seanhong1215.github.io/workspace/images/card_03.png" alt="">
+              <div class="card-body text-center">
+                <h5 class="card-title">2990元 / 日</h5>
+                <small class="subTitle">自由方案</small>
+                <p class="card-text">這是為獨立創作工作者提供的方案，您可以自由使用所有的空間服務。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="order">
       <form class="formControls">
         <div class="row container mx-auto align-items-md-end">
-          <div class="col-12 col-md-6 col-lg-2 ">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
               <label for="date" class="form-label">預約日期</label>
               <input type="text" name="foo" id="date" class="form-control" placeholder="請選擇時間">
           </div>
-          <div class="col-12 col-md-6 col-lg-2 ">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <label for="time" class="form-label">預約時段</label>
             <select
               class="form-select form-select-md"
@@ -84,12 +122,12 @@
               id="time"
             >
               <option selected>預約時段</option>
-              <option value="12 : 00">12 : 00</option>
+              <!-- <option value="12 : 00">12 : 00</option>
               <option value="18 : 00">18 : 00</option>
-              <option value="20 : 00">20 : 00</option>
+              <option value="20 : 00">20 : 00</option> -->
             </select>
           </div>
-          <div class="col-12 col-md-6 col-lg-2 ">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <label for="seat" class="form-label">座位大小</label>
             <select
               class="form-select form-select-md"
@@ -99,10 +137,10 @@
               <option selected>座位大小</option>
               <option value="單人座">單人座</option>
               <option value="雙人座">雙人座</option>
-              <!-- <option value="3">圓桌</option> -->
+              <option value="3">圓桌</option>
             </select>
           </div>
-          <div class="col-12 col-md-6 col-lg-2 ">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <label for="paid" class="form-label">消費方式</label>
             <select
               class="form-select form-select-md"
@@ -110,24 +148,40 @@
               id="paid"
             >
               <option selected>消費方式</option>
+              <option value="一杯飲料">一杯飲料</option>
+              <option value="一杯咖啡">一杯咖啡</option>
+              <option value="一份餐點">一份餐點</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <label for="paid" class="form-label">價格方案</label>
+            <select
+              class="form-select form-select-md"
+              aria-label=".form-select-sm example"
+              id="price"
+            >
+              <option selected>價格方案</option>
               <option value="體驗方案">體驗方案</option>
               <option value="一般方案">一般方案</option>
               <option value="自由方案">自由方案</option>
             </select>
           </div>
-          <div class="col-12 col-md-6 col-lg-2">
-            <label for="paid" class="form-label">預約人數</label>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <label for="number" class="form-label">預約人數</label>
             <div class="input-group">
               <button class="btn btn-outline-secondary remove material-icons cartAmount-icon" type="button" id="button-addon1">remove</button>
-              <input type="text" class="form-control num" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" value="1">
+              <input type="text" class="form-control text-center" data-key="num" aria-label="Example text with button addon" aria-describedby="button-addon1" value = 0>
               <button class="btn btn-outline-secondary add material-icons cartAmount-icon" type="button" id="button-addon1">add</button>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-2">
-            <button type="button" class="btn btn-outline-primary d-block">送出</button>
+          <div class="col-12 col-md-6 col-lg-4 ms-auto">
+            <button type="button" class="btn btn-outline-primary w-100 js-btn">送出</button>
           </div>
         </div>
       </form>
+      <ul class="list">
+        <li></li>
+      </ul>
     </section>
     
     <script
@@ -137,8 +191,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- <script src="assets/js/all.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/account.js"></script>
-
+    <!-- <script src="assets/js/all.js"></script> -->
+    <script src="assets/js/order.js"></script>
   </body>
 </html>

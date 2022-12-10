@@ -21,6 +21,10 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link
+    href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="../assets/css/admin.css" />
   </head>
   <body class="d-flex flex-column h-100">
@@ -28,7 +32,7 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
         <section class="container-fluid">
-          <a href="/" class="navbar-brand">後台首頁</a>
+          <a href="/admin"" class="navbar-brand"><img src="../assets/images/logo.png" alt="logo" /></a>
 
           <button
             class="navbar-toggler"
@@ -50,6 +54,11 @@
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"
+                  >前往前台</a
+                >
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="/admin/login.html">管理者登入</a>
               </li>
             </ul>
@@ -64,20 +73,21 @@
             <div class="header">
               <div class="rows">
                 <div class="item">預約編號</div>
-                <div class="item">預約姓名</div>
-                <div class="item">Email</div>
-                <div class="item">電話</div>
+                <!-- <div class="item">預約姓名</div> -->
+                <!-- <div class="item">Email</div> -->
+                <!-- <div class="item">電話</div> -->
                 <div class="item">預約人數</div>
                 <div class="item">預約座位</div>
                 <div class="item">消費方式</div>
+                <div class="item">選擇方案</div>
                 <div class="item">預約日期</div>
                 <div class="item">預約時間</div>
                 <div class="item">操作</div>
               </div>
             </div>
             <div class="body">
-              <div class="rows">
-                <div class="item">012345678</div>
+              <div class="rows my-order">
+                <!-- <div class="item">012345678</div>
                 <div class="item">segum adebayo</div>
                 <div class="item">saga@chakra-ui.com</div>
                 <div class="item">0988-111-222</div>
@@ -89,29 +99,9 @@
                 <div class="item">
                   <button type="button" class="btn btn-secondary" value="編輯">編輯</button>
                   <button type="button" class="btn btn-danger" value="刪除">刪除</button>
-                </div>
-              </div>
-              <div class="rows">
-                <div class="item">012345678</div>
-                <div class="item">segum adebayo</div>
-                <div class="item">saga@chakra-ui.com</div>
-                <div class="item">0988-111-222</div>
-                <div class="item">4</div>
-                <div class="item">雙人座</div>
-                <div class="item">一般消費</div>
-                <div class="item">2022-10-10</div>
-                <div class="item">18:00-19:00</div>
-                <div class="item">
-                  <button type="button" class="btn btn-secondary" value="編輯">編輯</button>
-                  <button type="button" class="btn btn-danger" value="刪除">刪除</button>
-                </div>
+                </div> -->
               </div>
             </div>
-            <!-- <div class="footer">
-              <div class="rows">
-                <div class="col">Total Count: 5</div>
-              </div>
-            </div> -->
           </div>
 
 
@@ -135,7 +125,9 @@
     ></script>
 
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/admin.js"></script>
     <!-- end of script -->
   </body>
 </html>

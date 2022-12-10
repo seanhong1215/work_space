@@ -48,7 +48,7 @@
   grid-column: 2/-1;
   overflow-x: auto;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 1rem;
 }
 .table-responsive .body .rows {
@@ -114,7 +114,7 @@
   .table-responsive .header .rows,
 .table-responsive .body .rows,
 .table-responsive .footer .rows {
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr;
   }
 }
