@@ -1,23 +1,15 @@
-  // const BASE_URL = 'http://localhost:3000';
-    // const LOGIN_URL = `${BASE_URL}/login`;
     const LOGIN_URL = '/login';
     const btnLogin = document.querySelector('.js-btn-login');
     const formLogin = document.querySelector('.js-form-login');
     const loginPages = document.querySelector('.js-login-pages');
     
-    /* end of definition */
 
     function saveUserToLocal({ accessToken, user }) {
       localStorage.setItem('token', accessToken);
       localStorage.setItem('userId', user.id);
     }
-    /* end of saveUserToLocal() */
 
-    /**
-     * #Step-1: `POST` data to API
-     */
     function login() {
-      console.log('Login!');
       const url = `${LOGIN_URL}`;
       const data = {
         email: formLogin.email.value.trim(),
@@ -53,37 +45,26 @@
               });
               window.location.replace('/');
             }
-            /* end of response.OK */
           })
           .catch(function (error) {
             console.log('error:::', JSON.stringify(error, null, 2));
           });
-        /*  end of axios */
       }
     }
-    /* end of login() */
 
 
-     // const BASE_URL = 'http://localhost:3000';
-      // const BASE_SIGNUP_URL = `${BASE_URL}/signup`;
       const SIGNUP_URL = "/signup";
-
       const domMsg = document.querySelector(".js-msg");
       const btnSignup = document.querySelector(".js-btn-signup");
       const formSignup = document.querySelector(".js-form-signup");
-      /* end of definition */
 
       function saveUserToLocal({ accessToken, user }) {
         localStorage.setItem("token", accessToken);
         localStorage.setItem("userId", user.id);
       }
-      /* end of saveUserToLocal() */
-
 
       function signup() {
-        console.log("Signup!");
         const url = `${SIGNUP_URL}`;
-
         const data = {
           email: formSignup.email.value.trim(),
           password: formSignup.password.value.trim(),
@@ -117,8 +98,6 @@
       /* end of signup() */
 
 
-
-
 const orderList = document.querySelector('.my-order');
       function init() {
         getData()
@@ -150,31 +129,39 @@ const orderList = document.querySelector('.my-order');
         orderList.innerHTML = str;
       }
 
-
       orderList.addEventListener('click', function(e){
         const id = e.target.getAttribute("data-id");
-        deleteOrder(id)
+        if(id) {
+          deleteOrder(id)
+          return
+        }
     })
   
-    
-    
+        
     function deleteOrder(id) {
-      axios
-        .delete(`${BASE_URL}/myOrders/${id}`)
-            .then((res) => {
-            console.log(res.data);
+      Swal.fire({
+        title: '確定要刪除?',
+        icon: 'error',
+        showCancelButton: true, 
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '確定',
+        cancelButtonText: '取消',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          axios
+          .delete(`${BASE_URL}/myOrders/${id}`)
+          .then((res) => {
+            Swal.fire(
+              '你已經刪除!',
+              'success'
+            );
             getData();
-            Swal.fire({
-              position: 'center',
-              icon: 'success',
-              title: '刪除成功',
-              showConfirmButton: false,
-              timer: 1500
-            });
-            })
-            .catch((error) => {
+          })
+          .catch((error) => {
             console.log(error);
-            });
+          });
+        }
+      })
     }
-    
     

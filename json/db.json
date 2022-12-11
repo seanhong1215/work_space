@@ -7,7 +7,7 @@
       "role": "admin"
     },
     {
-      "email": "stanley215@gmail.com",
+      "email": "stanley1215@gmail.com",
       "password": "$2a$10$hzXmIBbiFnN0xSMnIcX03.5CC.oW8cF/8ORH2pjOpX.6LvHPlv.LK",
       "role": "user",
       "id": 2
@@ -183,60 +183,77 @@
   ],
   "myOrders": [
     {
-      "id": 1670665453641,
-      "time": "18:00",
-      "seat": "3",
-      "paid": "一杯咖啡",
-      "date": "2022-12-29",
+      "id": 2,
+      "userId": 2,
+      "time": "預約時段",
+      "seat": "座位大小",
+      "paid": "消費方式",
+      "date": "",
       "number": "1",
-      "price": "一般方案",
-      "images": "http://localhost:3001/assets/images/card_01.png"
+      "price": "體驗方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
     },
     {
-      "id": 1670679571371,
+      "id": 2,
+      "userId": 2,
       "time": "15:00",
       "seat": "單人座",
-      "paid": "一杯飲料",
-      "date": "2022-12-22",
-      "number": "6",
+      "paid": "消費方式",
+      "date": "2023-01-03",
+      "number": "2",
       "price": "一般方案",
       "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
     },
     {
-      "id": 1670679594225,
-      "time": "19:00",
+      "id": 2,
+      "userId": 2,
+      "time": "15:00",
       "seat": "單人座",
-      "paid": "一杯咖啡",
-      "date": "2022-12-30",
-      "number": "5",
-      "price": "體驗方案",
-      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
-    },
-    {
-      "id": 1670679616398,
-      "time": "21:00",
-      "seat": "雙人座",
-      "paid": "一杯咖啡",
-      "date": "2023-01-20",
+      "paid": "消費方式",
+      "date": "2022-12-28",
       "number": "2",
-      "price": "體驗方案",
-      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
+      "price": "自由方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_04.png"
     },
     {
-      "id": 1670679640052,
-      "time": "20:00",
+      "userId": "5",
+      "time": "14:00",
+      "seat": "3",
+      "paid": "一杯飲料",
+      "date": "2022-12-29",
+      "number": "2",
+      "price": "一般方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_02.png",
+      "id": 4
+    },
+    {
+      "userId": "5",
+      "time": "19:00",
       "seat": "雙人座",
       "paid": "一杯飲料",
-      "date": "2023-02-11",
+      "date": "2023-01-04",
       "number": "4",
-      "price": "自由方案",
-      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
+      "price": "體驗方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_01.png",
+      "id": 5
+    },
+    {
+      "userId": "5",
+      "time": "19:00",
+      "seat": "雙人座",
+      "paid": "一杯飲料",
+      "date": "2023-01-04",
+      "number": "4",
+      "price": "體驗方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_01.png",
+      "id": 7
     }
   ],
   "orders": [
     {
       "appointmentDate": "",
       "AppointmentTime": [
+        "00:00",
         "10:00",
         "11:00",
         "12:00",
@@ -263,14 +280,46 @@
       "number": ""
     }
   ],
-  "settings": [
+  "products": [
+    {
+      "id": 1,
+      "title": "體驗方案",
+      "body": "將由專人導覽解說，帶你認識環境、了解每個空間的服務，你也可以自由的體驗。",
+      "price": "100元 / 日",
+      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
+    },
     {
       "id": 2,
-      "userId": 2,
+      "title": "一般方案",
+      "body": "專屬個人空間服務，你可以享用生活空間及獨立書店裡面所有的空間服務。",
+      "price": "1990元 / 日",
+      "images": "https://seanhong1215.github.io/workspace/images/card_02.png"
+    },
+    {
+      "id": 3,
+      "title": "自由方案",
+      "body": "這是為獨立創作工作者提供的方案，您可以自由使用所有的空間服務。",
+      "price": "2990元 / 日",
+      "images": "https://seanhong1215.github.io/workspace/images/card_04.png"
+    }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "userId": 1,
       "name": "seanhong",
       "email": "seanhong@gmail.com",
       "phone": "0988000998",
-      "birthday": "",
+      "birthday": "2022-12-28",
+      "profile": ""
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "sean",
+      "email": "seanhong@gmail.com",
+      "phone": "0988000998",
+      "birthday": "2022-12-28",
       "profile": ""
     },
     {
