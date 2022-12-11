@@ -8,7 +8,7 @@ const jwt_decode = require("jwt-decode");
 const JWT_SECRET_KEY =
   require("json-server-auth/dist/constants").JWT_SECRET_KEY;
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 const server = jsonServer.create();
 const router = jsonServer.router("./json/db.json");
