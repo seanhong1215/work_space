@@ -65,82 +65,10 @@ function combineProductString(item) {
       <p class="card-txt">
         ${item.body}
       </p>
-      <button class="more_btn" onclick="javascript:location.href='../../service.html'">了解更多</button>
+      <button class="more_btn" onclick="javascript:location.href='./service.html'">了解更多</button>
   </div>
   </div>
 </div>
   `);
 }
-
-// function renderDataCoffee(data) {
-//   let str = "";
-//   data.forEach((item) => {
-//     str += `
-// <div class="col-sm-12 col-md-6 col-lg-3 ">
-//       <div class="item">
-//         <img
-//           src="${item.images}"
-//           class="card-img-top"
-//         />
-//            <div class="card-wrap">
-//           <h3 class="card-body text-center">${item.title}</h3>
-//           <p class="card-txt">
-//             ${item.body}
-//           </p>
-//           <button class="more_btn" onclick="javascript:location.href='../../service.html'">了解更多</button>
-//       </div>
-//       </div>
-//     </div>
-// `;
-//   });
-//   space_coffee.innerHTML = str;
-// }
-
-// function renderDataCreator(data) {
-//   let str = "";
-//   data.forEach((item) => {
-//     str += `
-//   <div class="col-sm-12 col-md-6 col-lg-3 ">
-//         <div class="item">
-//           <img
-//             src="${item.images}"
-//             class="card-img-top"
-//           />
-//              <div class="card-wrap">
-//             <h3 class="card-body text-center">${item.title}</h3>
-//             <p class="card-txt">
-//               ${item.body}
-//             </p>
-//             <button class="more_btn" onclick="javascript:location.href='../../service.html'">了解更多</button>
-//         </div>
-//         </div>
-//       </div>
-//   `;
-//   });
-//   space_creator.innerHTML = str;
-// }
-
-// function renderDataLife(data) {
-//   let str = "";
-//   data.forEach((item) => {
-//     str += `
-//   <div class="col-sm-12 col-md-6 col-lg-3 ">
-//         <div class="item">
-//           <img
-//             src="${item.images}"
-//             class="card-img-top"
-//           />
-//              <div class="card-wrap">
-//             <h3 class="card-body text-center">${item.title}</h3>
-//             <p class="card-txt">
-//               ${item.body}
-//             </p>
-//             <button class="more_btn" onclick="javascript:location.href='../../service.html'">了解更多</button>
-//         </div>
-//         </div>
-//       </div>
-//   `;
-//   });
-//   space_life.innerHTML = str;
-// }
 

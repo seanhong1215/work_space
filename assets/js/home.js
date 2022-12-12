@@ -25,7 +25,7 @@ str += `
         <p class="card-txt">
           ${item.body}
         </p>
-        <button class="more_btn" onclick="javascript:location.href='../../service.html'">了解更多</button>
+        <button class="more_btn" onclick="javascript:location.href='./service.html'">了解更多</button>
       </div>
     </div>
 `
