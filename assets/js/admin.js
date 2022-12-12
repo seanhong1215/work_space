@@ -1,4 +1,5 @@
-    const LOGIN_URL = '/login';
+    
+    const LOGIN_URL = 'https://json-server-vercel-moal5wmvq-seanhong1215.vercel.app/login';
     const btnLogin = document.querySelector('.js-btn-login');
     const formLogin = document.querySelector('.js-form-login');
     const loginPages = document.querySelector('.js-login-pages');
@@ -53,7 +54,7 @@
     }
 
 
-      const SIGNUP_URL = "/signup";
+      const SIGNUP_URL = "https://json-server-vercel-moal5wmvq-seanhong1215.vercel.app/signup";
       const domMsg = document.querySelector(".js-msg");
       const btnSignup = document.querySelector(".js-btn-signup");
       const formSignup = document.querySelector(".js-form-signup");
