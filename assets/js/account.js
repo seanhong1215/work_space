@@ -20,7 +20,7 @@ function init () {
         showConfirmButton: false,
         timer: 2000
       });
-      window.location.replace('/');
+      window.location.replace('./index.html');
     }
   })
 }
@@ -29,6 +29,6 @@ init();
 loginPages.addEventListener('click', function(e){
     
     if(loginPages.innerHTML === '登入'){
-      window.location.replace('/login.html');
+      window.location.replace('./login.html');
     }
 })

@@ -34,7 +34,7 @@
                 showConfirmButton: false,
                 timer: 2000
               });
-              window.location.replace('/admin/index.html');
+              window.location.replace('./admin/index.html');
             } else if(response.status === 200 && role === "user") {
               saveUserToLocal(response.data);
               Swal.fire({
@@ -44,7 +44,7 @@
                 showConfirmButton: false,
                 timer: 2000
               });
-              window.location.replace('/');
+              window.location.replace('./index.html');
             }
           })
           .catch(function (error) {
@@ -87,7 +87,7 @@
                   showConfirmButton: false,
                   timer: 1500
                 });
-                window.location.replace("/login.html");
+                window.location.replace("./login.html");
               }
             })
             .catch(function (error) {
