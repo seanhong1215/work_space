@@ -432,13 +432,13 @@ section .title::after {
 .price .item .more_btn {
   padding: 12px 24px;
   border-radius: 8px;
-  bottom: 20px;
   background-color: transparent;
   border:1px solid rgb(114,141,129);
   color: rgb(114,141,129);
   font-size: 24px;
   margin: auto;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .price .item .more_btn:hover {

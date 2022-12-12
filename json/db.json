@@ -29,6 +29,12 @@
       "password": "$2a$10$LaotJZph01zS/JDP3S98A.pbc73BaVPDjgfUvtDVHXt8pr4mQiUAC",
       "id": 5,
       "role": "user"
+    },
+    {
+      "email": "stanleyhong@gmail.com",
+      "password": "$2a$10$I6HEVVv8gCjZpvjAATE70eiVc.Hkqs2Uqn5Npv7pw3bK57OJoiQnK",
+      "role": "user",
+      "id": 6
     }
   ],
   "spaces": [
@@ -185,17 +191,6 @@
     {
       "id": 2,
       "userId": 2,
-      "time": "預約時段",
-      "seat": "座位大小",
-      "paid": "消費方式",
-      "date": "",
-      "number": "1",
-      "price": "體驗方案",
-      "images": "https://seanhong1215.github.io/workspace/images/card_01.png"
-    },
-    {
-      "id": 2,
-      "userId": 2,
       "time": "15:00",
       "seat": "單人座",
       "paid": "消費方式",
@@ -247,6 +242,17 @@
       "price": "體驗方案",
       "images": "https://seanhong1215.github.io/workspace/images/card_01.png",
       "id": 7
+    },
+    {
+      "userId": "6",
+      "time": "19:00",
+      "seat": "3",
+      "paid": "一杯咖啡",
+      "date": "2022-12-21",
+      "number": "2",
+      "price": "一般方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_02.png",
+      "id": 8
     }
   ],
   "orders": [

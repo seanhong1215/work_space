@@ -55,7 +55,7 @@ function renderProduct(data) {
         <h5 class="card-title">${item.price}</h5>
         <small class="subTitle">${item.title}</small>
         <p class="card-text">${item.body}</p>
-        <div class="more_btn cart">立刻預約</div>
+        <a href="../../order.html" class="more_btn cart">立刻預約</a>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 {
-  "name": "example-json-server",
+  "name": "複合式書店共享空間",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -7,18 +7,21 @@
     "json-server-auth",
     "fake api"
   ],
-  "homepage": "http://jsonplaceholder.typicode.com",
+  "homepage": "https://seanhong1215.github.io/work_space/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aya-X/example-json-server-auth.git"
+    "url": "https://github.com/seanhong1215/work_space.git"
   },
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "clone": "2.1.2",
     "formidable": "^2.0.1",
+    "gh-pages": "^4.0.0",
     "json-server": "0.17.0",
     "json-server-auth": "^2.1.0",
     "jwt-decode": "^3.1.2",
