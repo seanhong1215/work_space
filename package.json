@@ -1,5 +1,5 @@
 {
-  "name": "複合式書店共享空間",
+  "name": "js-project",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -7,7 +7,7 @@
     "json-server-auth",
     "fake api"
   ],
-  "homepage": "https://seanhong1215.github.io/work_space/",
+  "homepage": "https://seanhong1215.github.io/work_space",
   "repository": {
     "type": "git",
     "url": "https://github.com/seanhong1215/work_space.git"
