@@ -14,13 +14,14 @@ function init () {
     if(e.target.innerHTML === '登出'){
       localStorage.clear();
       Swal.fire({
-        position: 'center',
         icon: 'success',
         title: '登出成功',
-        showConfirmButton: false,
-        timer: 2000
+        confirmButtonText: 'OK',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.replace('./index.html');
+        }
       });
-      window.location.replace('./index.html');
     }
   })
 }

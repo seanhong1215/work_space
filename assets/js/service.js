@@ -49,7 +49,7 @@ function renderProduct(data) {
   let str = "";
   data.forEach((item) => {
     str += `
-    <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="col-md-12 col-lg-4">
     <div class="item">
       <div class="card-body text-center">
         <h5 class="card-title">${item.price}</h5>

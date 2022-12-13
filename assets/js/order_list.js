@@ -24,10 +24,10 @@ function renderData(data) {
     str += `
   <div class="order_list">
     <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-md-12 col-lg-4">
           <img src="${item.images}" alt="">
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-12 col-lg-4">
           <ul class="list">
             <li>預計日期：${item.date}</li>
             <li>預計時間：${item.time}</li>
@@ -37,7 +37,7 @@ function renderData(data) {
             <li>價格方案：${item.price}</li>
           </ul>
         </div>
-        <div class="col-4 d-flex align-items-end justify-content-end js-btn">
+        <div class="col-12 col-md-12 col-lg-4 js-btn">
           <button type="button" class="btn btn-danger" data-cancel="${item.id}">取消預約</button>
         </div>
     </div>

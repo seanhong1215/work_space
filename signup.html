@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-Hant-TW" class="h-100">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,10 +101,17 @@
     ></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="./assets/js/admin.js"></script>
     <script>
       function init() {
         btnSignup.addEventListener("click", () => signup());
+        // btnSignup.addEventListener("keypress",function(e) {
+        //   if(e.keyCode === 13) {
+        //     e.preventDefault();
+        //     signup();
+        //   }
+        // });
       }
       /* end of init() */
 

@@ -1,6 +1,10 @@
-const elem = document.querySelector('input[name="foo"]');
+const elem = document.querySelector('input[name="預約日期"]');
 const datepicker = new Datepicker(elem, {
   format: "yyyy-mm-dd",
+  buttonClass: 'btn',
+  defaultViewDate: 'today',
+  orientation: 'auto',
+  todayBtn: true
 });
 
 // 新增資料DOM
@@ -16,9 +20,6 @@ const btn = document.querySelector(".js-btn");
 
 
 function init() {
-  axios.get(`${BASE_URL}/orders`).then((res) => {
-    renderData(res.data);
-  });
   axios.get(`${BASE_URL}/products`).then((res) => {
     renderProduct(res.data);
   });
@@ -43,22 +44,11 @@ function renderCounter(renderValue) {
 }
 
 
-function renderData(data) {
-  let str = "";
-  data.forEach((date) => {
-    date.AppointmentTime.forEach((item) => {
-      str += `
-        <option value="${item}">${item}</option>
-        `;
-    });
-  });
-  time.innerHTML = str;
-}
 function renderProduct(data) {
   let str = "";
   data.forEach((item) => {
     str += `
-    <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="col-md-12 col-lg-4">
     <div class="item">
       <img class="img" src="${item.images}" alt="">
       <div class="card-body text-center">
@@ -89,17 +79,36 @@ price.addEventListener('change', function(e){
 
 function addData() {
   const form = document.querySelector(".formControls");
-  data.push({
-    userId: userId,
-    time: time.value,
-    seat: seat.value,
-    paid: paid.value,
-    date: date.value,
-    number: counterNumberDisplay.value,
-    price: price.value,
-    images: imgSrc,
-  });
+  let errors = validate(form, constraints) || "";
+  if (errors) {
+    Object.keys(errors).forEach(function (keys) {
+      document.querySelector(`[data-message="${keys}"]`).textContent =
+        errors[keys];
+    });
+  } else {
+    if(token){
+      data.push({
+        userId: userId,
+        time: time.value,
+        seat: seat.value,
+        paid: paid.value,
+        date: date.value,
+        number: counterNumberDisplay.value,
+        price: price.value,
+        images: imgSrc,
+      });
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: '請先登入會員在進行預約',
+        timer: 3000
+      });
+      window.location.replace('./login.html');
+    }
+  }
 
+
+ 
   form.reset();
   getData(data);
 }
@@ -123,3 +132,55 @@ function getData(data) {
   });
 }
 
+
+//驗證
+const constraints = {
+  預約日期: {
+    presence: {
+      message: "必填欄位"
+    }
+  },
+  預約時段: {
+    presence: {
+      message: "必填欄位"
+    },
+  },
+  座位大小: {
+    presence: {
+      message: "必填欄位"
+    },
+  },
+  消費方式: {
+    presence: {
+      message: "必填欄位"
+    }
+  },
+  價格方案: {
+    presence: {
+      message: "必填欄位"
+    }
+  },
+  預約人數: {
+    presence: {
+      message: "必填欄位"
+    }
+  }
+};
+
+
+const inputs = document.querySelectorAll("input[name],select[name]");
+
+inputs.forEach((item) => {
+  item.addEventListener("change", function () {
+    item.nextElementSibling.textContent = "";
+    let errors = validate(form, constraints) || "";
+
+    if (errors) {
+      Object.keys(errors).forEach(function (keys) {
+        // console.log(document.querySelector(`[data-message=${keys}]`))
+        document.querySelector(`[data-message="${keys}"]`).textContent =
+          errors[keys];
+      });
+    }
+  });
+});

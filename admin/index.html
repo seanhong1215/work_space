@@ -32,7 +32,7 @@
       <!-- Fixed navbar -->
       <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
         <section class="container-fluid">
-          <a href="./admin/index.html" class="navbar-brand"><img src="../assets/images/logo.png" alt="logo" /></a>
+          <a href="./index.html" class="navbar-brand"><img src="../assets/images/logo.png" alt="logo" /></a>
 
           <button
             class="navbar-toggler"
@@ -48,11 +48,6 @@
 
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./admin/index.html"
-                  >後台管理</a
-                >
-              </li>
               <li class="nav-item">
                 <a class="nav-link js-admin-login" href="./login.html">管理者登入</a>
               </li>
@@ -110,19 +105,23 @@
 function init () {
         if(token) {
           loginAdmin.innerHTML = '登出';
+        } else {
+          document.querySelector('main').style.display = "none";
+          loginAdmin.innerHTML = '管理者登入';
         }
         loginAdmin.addEventListener('click', function(e){
           e.preventDefault();
           if(e.target.innerHTML === '登出'){
             localStorage.clear();
             Swal.fire({
-              position: 'center',
               icon: 'success',
               title: '登出成功',
-              showConfirmButton: false,
-              timer: 2000
-            });
-            window.location.replace('./index.html');
+              confirmButtonText: 'OK',
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.replace('../index.html');
+              }
+            })
           }
         })
       }

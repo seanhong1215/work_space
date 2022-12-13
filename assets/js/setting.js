@@ -1,6 +1,10 @@
 const elem = document.querySelector('input[name="foo"]');
 const datepicker = new Datepicker(elem, {
   format: "yyyy-mm-dd",
+  buttonClass: 'btn',
+  defaultViewDate: 'today',
+  orientation: 'auto',
+  todayBtn: true
 });
 
 //個人資料
