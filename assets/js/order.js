@@ -101,7 +101,11 @@ function addData() {
       Swal.fire({
         icon: 'warning',
         title: '請先登入會員在進行預約',
-        timer: 3000
+        confirmButtonText: 'OK',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.replace("./login.html");
+        }
       });
       window.location.replace('./login.html');
     }
@@ -122,8 +126,11 @@ function getData(data) {
           position: "center",
           icon: "success",
           title: "你已經預約成功，請到會員專區查看",
-          showConfirmButton: false,
-          timer: 2000,
+          showConfirmButton: OK,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.replace("./login.html");
+          }
         });
       })
       .catch((err) => {

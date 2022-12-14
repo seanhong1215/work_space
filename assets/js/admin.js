@@ -33,7 +33,18 @@
               Swal.fire({
                 icon: 'success',
                 title: '登入成功',
-                timer: 3000
+                confirmButtonText: 'OK',
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.replace("./login.html");
+                } else{
+                  Swal.fire({
+                    icon: 'warning',
+                    title: '請填寫正確資訊',
+                    confirmButtonText: 'OK',
+                  })
+                  return
+                }
               });
               window.location.replace('./admin/index.html');
             } else if(response.status === 200 && role === "user") {
@@ -45,7 +56,22 @@
               }).then((result) => {
                 if (result.isConfirmed) {
                   window.location.replace('./index.html');
+                } else{
+                  Swal.fire({
+                    icon: 'warning',
+                    title: '請填寫正確資訊',
+                    confirmButtonText: 'OK',
+                  })
+                  return
                 }
+              }) 
+              .catch(function (error) {
+                swal({
+                  title: "此帳號不存在或帳號密碼錯誤",
+                  icon: "error",
+                  buttons: "OK",
+                  dangerMode: true,
+                });
               });
             }
           })
@@ -84,6 +110,13 @@
                   if (result.isConfirmed) {
                     window.location.replace("./login.html");
                   }
+                });
+              }else{
+                swal({
+                  title: "帳號註冊失敗，有可能有人用你的email註冊！",
+                  icon: "error",
+                  buttons: "OK",
+                  dangerMode: true,
                 });
               }
             })

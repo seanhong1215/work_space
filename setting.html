@@ -86,48 +86,64 @@
     <section class="setting">
       <div class="container">
         <div class="row">
+          
           <form class="col-12">
+            <div class="mb-3 avatar">
+              <input class="person-file" type="file" name="profile" accept="image/*" id="profile">
+              <span class="person-file-img"><img class="profileImg" src="" alt=""></span>
+            </div>
             <div class="form_item mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Email</label
+              <label for="signupEmail" class="form-label"
+                >註冊信箱</label
               >
               <input
                 type="email"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="signupEmail"
                 placeholder="name@example.com"
               />
             </div>
             <div class="form_item mb-3">
-              <label for="exampleFormControlInput2" class="form-label"
+              <label for="userName" class="form-label"
                 >姓名</label
               >
               <input
                 type="text"
                 class="form-control"
-                id="exampleFormControlInput2"
-                placeholder="請輸入姓名或暱稱"
+                id="userName"
+                placeholder="請輸入姓名"
               />
             </div>
             <div class="form_item mb-3">
-              <label for="exampleFormControlInput3" class="form-label"
-                >手機號碼</label
+              <label for="userSubName" class="form-label"
+                >暱稱</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="userSubName"
+                placeholder="請輸入暱稱"
+              />
+            </div>
+            <div class="form_item mb-3">
+              <label for="phoneNumber" class="form-label"
+                >聯絡電話</label
               >
               <input
                 type="number"
                 class="form-control"
-                id="exampleFormControlInput3"
+                id="phoneNumber"
                 placeholder="請輸入手機號碼"
               />
             </div>
             <div class="form_item mb-3">
-              <label for="exampleFormControlInput4" class="form-label"
+              <label for="birthDate" class="form-label"
                 >生日</label
               >
               <input
                 type="date"
                 name="foo"
-                id="exampleFormControlInput4"
+                id="birthDate"
                 class="form-control"
                 placeholder="請輸入生日"
               />

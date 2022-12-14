@@ -267,7 +267,7 @@ section .title::after {
   padding: 30px 0;
 }
 
-@media (min-width: 375px) and (max-width: 991px){
+@media (min-width: 320px) and (max-width: 991px){
   .navbar-nav {
     margin-top: 12px;
   }
@@ -469,7 +469,7 @@ section .title::after {
   font-weight: 600;
 }
 
-@media (min-width: 375px) and (max-width: 991px){
+@media (min-width: 320px) and (max-width: 991px){
   .space-banner-txt {
     padding: 10px 0;
     font-size: 24px;
@@ -570,7 +570,7 @@ color: #fff;
 transition: .3s;
 }
 
-@media (min-width: 375px) and (max-width: 991px){
+@media (min-width: 320px) and (max-width: 991px){
   .price_reading {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -643,8 +643,38 @@ transition: .3s;
   color: #fff;
   transition: .3s;
 }
+.person-file {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border:1px solid rgb(114,141,129);
+  font-size: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+.avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@media (min-width: 375px) and (max-width: 991px) {
+}
+.avatar .person-file-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border:1px solid rgb(114,141,129);
+
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
   .setting {
    padding: 40px 0;
   }
@@ -707,7 +737,7 @@ transition: .3s;
   padding: 20px;
 }
 
-@media (min-width: 375px) and (max-width: 991px) {
+@media (min-width: 320px) and (max-width: 991px) {
   .order_list_space .list {
    padding: 0;
    margin-top: 20px;
