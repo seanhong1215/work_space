@@ -70,9 +70,10 @@
         <h2 class="formControls_txt">登入</h2>
         <label class="formControls_label" for="exampleInputEmail1">Email</label>
         <input class="formControls_input" type="text" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="請輸入 email" required>
-        <span>此欄位不可留空</span>
+        <span data-message="信箱"></span>
         <label class="formControls_label" for="exampleInputPassword1">密碼</label>
         <input class="formControls_input" type="password" name="password" id="exampleInputPassword1" placeholder="請輸入密碼" required>
+        <span data-message="密碼"></span>
         <input class="formControls_btnSubmit js-btn-login" type="button" value="登入">
         <a class="formControls_btnLink" href="./signup.html">註冊帳號</a>
     </form>
@@ -85,20 +86,27 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+  <script src="./assets/js/config.js"></script>
   <script src="./assets/js/admin.js"></script>
   <script>
-     function init() {
-      btnLogin.addEventListener('click', () => login());
-      // btnLogin.addEventListener("keypress",function(e) {
-      //     if(e.keyCode === 13) {
-      //       e.preventDefault();
-      //       login();
-      //     }
-      //   });
-    }
-    /* end of init() */
+    formLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.value === "登入") login();
+  if (e.target.textContent === "註冊帳號") {
+    window.location.replace("./signup.html");
+  }
+  
+});
 
-    init();
+formLogin.addEventListener("keydown", function (e) {
+  if (e.target.value === "登入" || e.keyCode === 13) {
+    e.preventDefault();
+    login();
+  } else {
+    return;
+  }
+});
   </script>
 </body>
 </html>

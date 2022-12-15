@@ -87,7 +87,7 @@
       <div class="container">
         <div class="row">
           
-          <form class="col-12">
+          <form class="col-12" enctype="multipart/form-data" action="/upload" method="POST">
             <div class="mb-3 avatar">
               <input class="person-file" type="file" name="profile" accept="image/*" id="profile">
               <span class="person-file-img"><img class="profileImg" src="" alt=""></span>
@@ -146,6 +146,17 @@
                 id="birthDate"
                 class="form-control"
                 placeholder="請輸入生日"
+              />
+            </div>
+            <div class="form_item mb-3">
+              <label for="editPassword" class="form-label"
+                >修改密碼</label
+              >
+              <input
+                type="password"
+                id="editPassword"
+                class="form-control"
+                placeholder="請輸入新的密碼"
               />
             </div>
             <button type="button" class="btn btn-primary save w-100">

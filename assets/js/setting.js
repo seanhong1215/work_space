@@ -1,21 +1,21 @@
 const elem = document.querySelector('input[name="foo"]');
 const datepicker = new Datepicker(elem, {
   format: "yyyy-mm-dd",
-  buttonClass: 'btn',
-  defaultViewDate: 'today',
-  orientation: 'auto',
-  todayBtn: true
+  buttonClass: "btn",
+  defaultViewDate: "today",
+  orientation: "auto",
+  todayBtn: true,
 });
 
 //個人資料
 const account = document.querySelector('input[type="email"]');
-const userName = document.querySelector('#userName');
+const userName = document.querySelector("#userName");
 const phone = document.querySelector('input[type="number"]');
 const date = document.querySelector('input[name="foo"]');
-const userSubName = document.querySelector('#userSubName');
-const profile = document.querySelector('#profile');
-const profileImg = document.querySelector('.profileImg');
-
+const userSubName = document.querySelector("#userSubName");
+const profile = document.querySelector("#profile");
+const profileImg = document.querySelector(".profileImg");
+const userPassword = document.querySelector('input[type="password"]');
 const save = document.querySelector(".save");
 
 function init() {
@@ -31,15 +31,33 @@ save.addEventListener("click", function () {
       phone: phone.value,
       birthday: date.value,
       userSubName: userSubName.value,
-      profile: profileImg.src,
     })
     .then(function (response) {
+      Swal.fire({
+        icon: "success",
+        title: "儲存成功",
+        time: 3000
+      })
+      updatePassword()
       console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
     });
 });
+
+function updatePassword(){
+  axios.patch(`${BASE_URL}/users/${userId}`, {
+    password: userPassword.value
+  })
+  .then(function(res){
+    console.log(res.data)
+  })
+  .catcg(function(err){
+    console.log(err)
+  })
+}
+
 
 function getData(id) {
   axios
@@ -59,39 +77,46 @@ function getData(id) {
 }
 
 
-profile.addEventListener('change', function(e){
-  const file = e.target.files[0];
 
-// ---
-const image = (e) => {
-  profileImg.src = e.target.result;
-};
-  const reader = new FileReader(); //建立FileReader
-      reader.addEventListener("load", image); // 監聽load事件
-      reader.readAsDataURL(file); //轉base64格式
-      // ---
-  // profileImg.src = URL.createObjectURL(file);
-  // profileImg.onload = () => {
-  //   URL.revokeObjectURL(profileImg.src);
-  // }
+profile.addEventListener("change", handlerFile);
+function handlerFile(e) {
+  readUrl(e.target); // this
+}
+function readUrl(input) {
+  // console.log(input.files[0])
+  // console.log(input.files)
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      profileImg.src = e.target.result;
+    };
+    // console.log(profileImg.src);
+    reader.readAsDataURL(input.files[0]); // 讀取檔案
+    // console.log(reader);
+    // imgFile = reader.result;
+  }
+}
 
-  save.addEventListener('click', function(e){
-        //  圖片儲存至server
-        // const formData = new FormData();
-        // formData.append("profile", file);
-        axios.patch(`${BASE_URL}/setting/${userId}`, {
-          profile: profileImg.src
-        })
-         .then((res) => {
-           if(res.status === 201) {
-             console.log(res.data)
-           }
-        })
-        .catch(error => {
-         console.log(error);
-        })
-  })
-  
-
-})
-
+// function formDataFile(imgFile) {
+//   console.log(imgFile);
+//   axios
+//     .patch(
+//       `${BASE_URL}/setting/${userId}`,
+//       {
+//         profile: imgFile,
+//       },
+//       {
+//         headers: {
+//           'Content-Type': 'multipart/form-data'
+//         }
+//       }
+//     )
+//     .then((res) => {
+//       if (res.status === 201) {
+//         console.log(res.data);
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }

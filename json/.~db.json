@@ -8,7 +8,7 @@
     },
     {
       "email": "stanley1215@gmail.com",
-      "password": "$2a$10$Xj4q65INaM6INt8x5VJUaO5lsuwEWL.f8njF82xP.eX5ArHLCAYHa",
+      "password": "",
       "role": "user",
       "id": 2
     },
@@ -255,6 +255,37 @@
       "id": 8
     }
   ],
+  "orders": [
+    {
+      "appointmentDate": "",
+      "AppointmentTime": [
+        "00:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00"
+      ],
+      "seat": [
+        "單人座",
+        "雙人座",
+        "四人座"
+      ],
+      "paid": [
+        "咖啡",
+        "飲料",
+        "餐點"
+      ],
+      "number": ""
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -287,7 +318,8 @@
       "email": "seanhong@gmail.com",
       "phone": "0988000998",
       "birthday": "2022-12-28",
-      "profile": "https://randomuser.me/api/portraits/women/44.jpg"
+      "profile": "https://randomuser.me/api/portraits/women/44.jpg",
+      "userPassword": ""
     },
     {
       "id": 2,
@@ -297,7 +329,8 @@
       "email": "stanley@gmail.com",
       "phone": "0988000998",
       "birthday": "2022-12-28",
-      "profile": "https://randomuser.me/api/portraits/men/97.jpg"
+      "profile": "https://randomuser.me/api/portraits/men/97.jpg",
+      "userPassword": "seanhong"
     },
     {
       "id": 3,
@@ -307,7 +340,8 @@
       "email": "stanley@gmail.com",
       "phone": "0988000000",
       "birthday": "",
-      "profile": "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+      "profile": "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      "userPassword": ""
     },
     {
       "id": 4,
@@ -317,7 +351,8 @@
       "email": "hong1215@gmail.com",
       "phone": "0988000000",
       "birthday": "2000-06-13",
-      "profile": "https://images.unsplash.com/photo-1499314014841-8664a8fba520?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=0dd31cdcac9fde5d972072b1531a6559"
+      "profile": "https://images.unsplash.com/photo-1499314014841-8664a8fba520?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=0dd31cdcac9fde5d972072b1531a6559",
+      "userPassword": ""
     },
     {
       "id": 5,
@@ -327,7 +362,8 @@
       "email": "uxdesign@gmail.com",
       "phone": "0988000000",
       "birthday": "",
-      "profile": "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200"
+      "profile": "https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200",
+      "userPassword": ""
     }
   ]
 }

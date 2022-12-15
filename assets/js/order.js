@@ -179,7 +179,6 @@ inputs.forEach((item) => {
   item.addEventListener("change", function () {
     item.nextElementSibling.textContent = "";
     let errors = validate(form, constraints) || "";
-
     if (errors) {
       Object.keys(errors).forEach(function (keys) {
         // console.log(document.querySelector(`[data-message=${keys}]`))
