@@ -48,7 +48,7 @@ function renderProduct(data) {
   let str = "";
   data.forEach((item) => {
     str += `
-    <div class="col-md-12 col-lg-4">
+    <div class="col-md-12 col-lg-4" data-aos="zoom-in">
     <div class="item">
       <img class="img" src="${item.images}" alt="">
       <div class="card-body text-center">

@@ -54,7 +54,7 @@ function renderProduct(data, space) {
 // 組字串
 function combineProductString(item) {
   return (`
-  <div class="col-sm-12 col-md-6 col-lg-3 ">
+  <div class="col-sm-12 col-md-6 col-lg-3" data-aos="zoom-in">
   <div class="item">
     <img
       src="${item.images}"

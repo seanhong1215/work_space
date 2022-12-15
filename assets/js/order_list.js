@@ -22,7 +22,7 @@ function renderData(data) {
   let str = "";
   data.forEach(item => {
     str += `
-  <div class="order_list">
+  <div class="order_list" data-aos="zoom-in">
     <div class="row">
         <div class="col-12 col-md-12 col-lg-4">
           <img src="${item.images}" alt="">

@@ -14,7 +14,10 @@ function renderData(data) {
 let str = "";
 data.forEach(item => {
 str += `
-<div class="card col-12 col-md-6">
+<div class="card col-12 col-md-6" data-aos="zoom-in"
+data-aos-easing="ease-in-back"
+data-aos-delay="300"
+data-aos-offset="0">
       <img
         src="${item.images}"
         class="card-img-top"

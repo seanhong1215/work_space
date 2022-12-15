@@ -4,3 +4,5 @@ btn.forEach(item => {
     window.location.href='./order.html'; 
   })
 })
+
+AOS.init();
