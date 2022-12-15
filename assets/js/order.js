@@ -107,7 +107,6 @@ function addData() {
           window.location.replace("./login.html");
         }
       });
-      window.location.replace('./login.html');
     }
   }
 
@@ -123,7 +122,6 @@ function getData(data) {
       .post(`${BASE_URL}/myOrders`, item)
       .then((res) => {
         Swal.fire({
-          position: "center",
           icon: "success",
           title: "你已經預約成功，請到會員專區查看",
           showConfirmButton: OK,
