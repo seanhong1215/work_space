@@ -19,6 +19,12 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "@fullcalendar/bootstrap5": "^6.0.0",
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/daygrid": "^6.0.0",
+    "@fullcalendar/interaction": "^6.0.0",
+    "@fullcalendar/list": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0",
     "clone": "2.1.2",
     "formidable": "^2.0.1",
     "gh-pages": "^4.0.0",

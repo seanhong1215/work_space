@@ -96,6 +96,7 @@ function addData() {
         number: counterNumberDisplay.value,
         price: price.value,
         images: imgSrc,
+        productId: Date.now()
       });
     } else {
       Swal.fire({
@@ -109,9 +110,6 @@ function addData() {
       });
     }
   }
-
-
- 
   form.reset();
   getData(data);
 }
@@ -121,15 +119,13 @@ function getData(data) {
     axios
       .post(`${BASE_URL}/myOrders`, item)
       .then((res) => {
-        Swal.fire({
-          icon: "success",
-          title: "你已經預約成功，請到會員專區查看",
-          showConfirmButton: OK,
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.replace("./login.html");
-          }
-        });
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '您已經成功預約，請到我的預約查看確認囉!',
+            showConfirmButton: false,
+            timer: 2000
+          })
       })
       .catch((err) => {
         console.log(err);

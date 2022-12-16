@@ -237,3 +237,26 @@
   text-decoration: none;
   text-align: center;
 }
+
+
+/* admin dashboard */
+header {
+  padding-top: 100px;
+}
+
+.dashboard .card {
+  box-shadow:0 2px 6px rgba(114,141,129,5);
+  /* background-color: rgb(114,141,129, .9); */
+  background-color: #fff;
+  border:none;
+}
+.dashboard .card:first-child {
+  background-color: rgb(114,141,129, .9);
+  color: #fff;
+}
+.dashboard .card img{
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  width: 60%;
+}
