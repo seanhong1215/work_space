@@ -11,6 +11,10 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -180,10 +184,11 @@
         </div>
       </div>
     </section>
-    <section class="member">
+    <section class="member container">
       <h2 class="title">會員推薦</h2>
-      <div class="container row">
-        <div class="col-lg-4 col-12 item">
+      <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide item">
           <p>
             <span class="material-symbols-outlined icon-star text-center">
               <i>star</i>
@@ -196,7 +201,7 @@
           </p>
           <span class="material-symbols-outlined icon-person"> person </span>
         </div>
-        <div class="col-lg-4 col-12 item">
+        <div class="swiper-slide item">
           <p>
             <span class="material-symbols-outlined icon-star text-center">
               <i>star</i>
@@ -209,7 +214,7 @@
           </p>
           <span class="material-symbols-outlined icon-person"> person </span>
         </div>
-        <div class="col-lg-4 col-12 item">
+        <div class="swiper-slide item">
           <p>
             <span class="material-symbols-outlined icon-star text-center">
               <i>star</i>
@@ -222,7 +227,48 @@
           </p>
           <span class="material-symbols-outlined icon-person"> person </span>
         </div>
-
+        <div class="swiper-slide item">
+          <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
+            超級棒的服務體驗，舒服又自在的環境，可以完全享受在閱讀中，專注力也比平常工作還要更集中，真心非常推薦大家一起加入會員。
+          </p>
+          <span class="material-symbols-outlined icon-person"> person </span>
+        </div>
+        <div class="swiper-slide item">
+          <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
+            很優質的閱讀場所，自從來了這裡之後，就沒再去過書局了，因為這邊比書局更大更舒服，可以完全享受在閱讀中，真心非常推薦大家一起加入會員。
+          </p>
+          <span class="material-symbols-outlined icon-person"> person </span>
+        </div>
+        <div class="swiper-slide item">
+          <p>
+            <span class="material-symbols-outlined icon-star text-center">
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              <i>star</i>
+              </span>
+            超級棒的服務體驗，比任何的共享辦公還要棒，價格也很親民，適合上班族下班後可以來的地方，有時候也會舉辦很棒的活動，希望大家一起來交流認識。
+          </p>
+          <span class="material-symbols-outlined icon-person"> person </span>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
     </section>
     <section class="contact">
       <h2 class="title">聯絡我們</h2>
@@ -305,6 +351,7 @@
     ></script>
   <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/config.js"></script>
     <script src="assets/js/account.js"></script>

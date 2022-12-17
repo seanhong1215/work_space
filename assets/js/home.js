@@ -18,11 +18,13 @@ str += `
 data-aos-easing="ease-in-back"
 data-aos-delay="300"
 data-aos-offset="0">
-      <img
-        src="${item.images}"
-        class="card-img-top"
-        alt="生活閱讀"
-      />
+      <div class="media">
+        <img
+          src="${item.images}"
+          class="card-img-top"
+          alt="生活閱讀"
+        />
+      </div>
       <div class="card-wrap">
         <h3 class="card-body text-center">${item.title}</h3>
         <p class="card-txt">
@@ -35,3 +37,17 @@ data-aos-offset="0">
 })
 space.innerHTML = str 
 }
+
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  slidesPerView: 3,
+  freeMode: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

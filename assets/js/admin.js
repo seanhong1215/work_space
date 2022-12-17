@@ -33,7 +33,7 @@ function login() {
     return axios
       .post(url, data)
       .then(function (response) {
-        console.log("login:::", JSON.stringify(response, null, 2));
+        // console.log("login:::", JSON.stringify(response, null, 2));
         const role = response.data.user.role;
         if (response.status === 200 && role === "admin") {
           saveUserToLocal(response.data);
@@ -60,7 +60,7 @@ function login() {
         }
       })
       .catch(function (error) {
-        console.log("error:::", JSON.stringify(error, null, 2));
+        // console.log("error:::", JSON.stringify(error, null, 2));
         Swal.fire({
           icon: "error",
           title: "此帳號不存在或帳號密碼錯誤",
@@ -87,7 +87,7 @@ function signup() {
     return axios
       .post(url, data)
       .then(function (response) {
-        console.log("signup:::", JSON.stringify(response, null, 2));
+        // console.log("signup:::", JSON.stringify(response, null, 2));
         if (response.status === 201) {
           saveUserToLocal(response.data);
           Swal.fire({
@@ -101,16 +101,16 @@ function signup() {
         }
       })
       .catch(function (error) {
-        console.log("error:::", JSON.stringify(error, null, 2));
+        // console.log("error:::", JSON.stringify(error, null, 2));
         Swal.fire({
-          title: "帳號註冊失敗，有可能有人用你的email註冊！",
+          title: "帳號註冊失敗！",
           icon: "error",
         });
       });
     /*  end of axios */
   } else {
     Swal.fire({
-      title: "帳號註冊失敗，有可能有人用你的email註冊！",
+      title: "帳號註冊失敗！",
       icon: "error",
     });
   }

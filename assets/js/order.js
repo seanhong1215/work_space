@@ -96,7 +96,7 @@ function addData() {
         number: counterNumberDisplay.value,
         price: price.value,
         images: imgSrc,
-        productId: Date.now()
+        id: Date.now(),
       });
     } else {
       Swal.fire({
@@ -122,7 +122,7 @@ function getData(data) {
           Swal.fire({
             position: 'center',
             icon: 'success',
-            title: '您已經成功預約，請到我的預約查看確認囉!',
+            title: '您已經成功預約，請到我的預約查看確認!',
             showConfirmButton: false,
             timer: 2000
           })
@@ -170,7 +170,6 @@ const constraints = {
 
 
 const inputs = document.querySelectorAll("input[name],select[name]");
-
 inputs.forEach((item) => {
   item.addEventListener("change", function () {
     item.nextElementSibling.textContent = "";

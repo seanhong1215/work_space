@@ -39,7 +39,6 @@ save.addEventListener("click", function () {
         time: 3000
       })
       updatePassword()
-      console.log(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -83,40 +82,12 @@ function handlerFile(e) {
   readUrl(e.target); // this
 }
 function readUrl(input) {
-  // console.log(input.files[0])
-  // console.log(input.files)
   if (input.files && input.files[0]) {
     const reader = new FileReader();
     reader.onload = function (e) {
       profileImg.src = e.target.result;
     };
-    // console.log(profileImg.src);
     reader.readAsDataURL(input.files[0]); // 讀取檔案
-    // console.log(reader);
-    // imgFile = reader.result;
   }
 }
 
-// function formDataFile(imgFile) {
-//   console.log(imgFile);
-//   axios
-//     .patch(
-//       `${BASE_URL}/setting/${userId}`,
-//       {
-//         profile: imgFile,
-//       },
-//       {
-//         headers: {
-//           'Content-Type': 'multipart/form-data'
-//         }
-//       }
-//     )
-//     .then((res) => {
-//       if (res.status === 201) {
-//         console.log(res.data);
-//       }
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// }

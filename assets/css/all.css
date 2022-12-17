@@ -145,14 +145,14 @@ section .title::after {
 }
 
 .member {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 .member .container{
   margin: auto;
 }
 .member .item{
-  margin-bottom: 100px;
   position: relative;
 }
 .member .item p {
@@ -266,6 +266,29 @@ section .title::after {
 .footer .logo {
   padding: 30px 0;
 }
+.service_content .card .media {
+  overflow: hidden;
+}
+.service_content .card .media img {
+    width: 100%;
+    height: 100%;
+    transform:scale(1,1);
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+.service_content .card .media img:hover {
+  transform: scale(1.2,1.2);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.swiper-slide {
+  text-align: center;
+  height: calc((100% - 30px) / 2) !important;
+}
 
 @media (min-width: 320px) and (max-width: 991px){
   .navbar-nav {
@@ -329,6 +352,7 @@ section .title::after {
 .services .card {
   margin-bottom: 30px;
 }
+
 .member {
   padding: 30px 0;
 }
@@ -358,7 +382,6 @@ section .title::after {
   font-size: 14px;
   width: 60%;
 }
-
 }
 
 
@@ -466,7 +489,22 @@ section .title::after {
 }
 .main_space_content {
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: 500;
+
+}
+
+.theme_space .item {
+  overflow: hidden;
+}
+.theme_space .item img {
+    width: 100%;
+    height: 100%;
+    transform:scale(1,1);
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+.theme_space .item img:hover {
+  transform: scale(1.2,1.2);
 }
 
 @media (min-width: 320px) and (max-width: 991px){
@@ -527,6 +565,7 @@ section .title::after {
   margin: auto 15px;
   box-shadow: 2px 2px 4px rgb(114 141 129 / 80%);
   border-radius: 8px;
+  overflow: hidden;
 }
 .price .item .card-title {
   font-size: 32px;
@@ -570,6 +609,12 @@ color: #fff;
 transition: .3s;
 }
 
+.myOrder .item:hover {
+  transform: translateY(-8px);
+  transition: all .3s;
+  box-shadow: 4px 4px 6px rgb(114 141 129 / 90%);
+}
+
 @media (min-width: 320px) and (max-width: 991px){
   .price_reading {
     padding-top: 40px;
@@ -607,6 +652,7 @@ transition: .3s;
   .order form {
     padding: 40px 0;
   }
+  
 }
 @media screen and (max-width:480px) {
   .price .item {
@@ -783,4 +829,13 @@ transition: .3s;
   color: #C72424;
   white-space: nowrap;
 
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: rgb(114,141,129);
+  box-shadow: 0 0 0 0.25rem rgb(114 141 129 / 25%);
+}
+.btn-outline-secondary:hover {
+  border-color: rgb(114,141,129);
+  background-color: rgb(114 141 129);
 }

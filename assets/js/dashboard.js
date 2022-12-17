@@ -29,7 +29,6 @@ init();
 
 // c3.js
 function renderC3(data) {
-  console.log(data);
   // 轉物件格式
   let total = {};
   data.forEach((item) => {
@@ -39,7 +38,6 @@ function renderC3(data) {
       total[item.price] += 1;
     }
   });
-  console.log(total);
 
   // 做資料關聯
   let categoryAry = Object.keys(total);
@@ -49,7 +47,6 @@ function renderC3(data) {
     ary.push(item);
     ary.push(total[item]);
     newData.push(ary);
-    console.log(categoryAry);
   });
 
   c3.generate({
@@ -83,7 +80,6 @@ function renderD3(data) {
     ary.push(item);
     ary.push(total[item]);
     newData.push(ary);
-    console.log(categoryAry);
   });
 
   c3.generate({
@@ -120,14 +116,11 @@ function sum(data) {
   result.textContent = `預約總人數：${num}人`;
 }
 
-
-
 function renderData(data) {
   let str = "";
   data.forEach((item) => {
-    console.log(item)
     str += `
-          <div class="item">${item.productId}</div>
+          <div class="item">${item.id}</div>
           <div class="item">${item.number}</div>
           <div class="item">${item.seat}</div>
           <div class="item">${item.paid}</div>
