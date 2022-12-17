@@ -43,7 +43,7 @@ function login() {
             confirmButtonText: "OK",
           }).then((result) => {
             if (result.isConfirmed) {
-              window.location.replace("../../admin/index.html");
+              window.location.replace("../admin/index.html");
             }
           });
         } else if (response.status === 200 && role === "user") {
