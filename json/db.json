@@ -8,7 +8,7 @@
     },
     {
       "email": "stanley1215@gmail.com",
-      "password": "$2a$10$Xj4q65INaM6INt8x5VJUaO5lsuwEWL.f8njF82xP.eX5ArHLCAYHa",
+      "password": "$2a$10$lOtX5SblMmnBI3pBaSHj0.RHrwh0SFB4EaCUXFWMXo86hSJLuZ47C",
       "role": "user",
       "id": 2
     },
@@ -35,6 +35,24 @@
       "password": "$2a$10$I6HEVVv8gCjZpvjAATE70eiVc.Hkqs2Uqn5Npv7pw3bK57OJoiQnK",
       "role": "user",
       "id": 6
+    },
+    {
+      "email": "hongu1215@gmail.com",
+      "password": "$2a$10$5sKeiCwJHVc8s7lmuk1aZOvU2BbHWYj0OBC8AgZvTd5.gyB82L4yq",
+      "role": "user",
+      "id": 7
+    },
+    {
+      "email": "test123@gmail.com",
+      "password": "$2a$10$nuWlg9.8tzLqua18PH3z2OOk2.7v/p790Uo9JPnc3EpUoASjh3csq",
+      "role": "user",
+      "id": 8
+    },
+    {
+      "email": "test005@gmail.com",
+      "password": "$2a$10$NsipHMGYQAYm5X/WsEo/9uYEWUAkqpt4lHS49g7TMfwh4C9BOHRlK",
+      "role": "user",
+      "id": 9
     }
   ],
   "spaces": [
@@ -220,6 +238,39 @@
       "price": "一般方案",
       "images": "https://seanhong1215.github.io/workspace/images/card_02.png",
       "id": 1671255750119
+    },
+    {
+      "userId": "7",
+      "time": "12:00",
+      "seat": "雙人座",
+      "paid": "咖啡",
+      "date": "2023-01-06",
+      "number": "2",
+      "price": "一般方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_02.png",
+      "id": 1671283923350
+    },
+    {
+      "userId": "7",
+      "time": "16:00",
+      "seat": "雙人座",
+      "paid": "餐點",
+      "date": "2022-12-28",
+      "number": "1",
+      "price": "自由方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_04.png",
+      "id": 1671287222733
+    },
+    {
+      "userId": "7",
+      "time": "14:00",
+      "seat": "單人座",
+      "paid": "飲料",
+      "date": "2022-12-31",
+      "number": "2",
+      "price": "體驗方案",
+      "images": "https://seanhong1215.github.io/workspace/images/card_01.png",
+      "id": 1671287268336
     }
   ],
   "products": [
@@ -259,7 +310,7 @@
     {
       "id": 2,
       "userId": 2,
-      "userName": "stanley",
+      "userName": "stanley1215",
       "userSubName": "綠豆豆",
       "email": "stanley@gmail.com",
       "phone": "0988000998",

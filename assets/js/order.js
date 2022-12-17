@@ -1,5 +1,5 @@
-const elem = document.querySelector('input[name="預約日期"]');
-const datepicker = new Datepicker(elem, {
+const date = document.querySelector('input[name="預約日期"]');
+const datepicker = new Datepicker(date, {
   format: "yyyy-mm-dd",
   buttonClass: 'btn',
   defaultViewDate: 'today',
@@ -8,11 +8,11 @@ const datepicker = new Datepicker(elem, {
 });
 
 // 新增資料DOM
-const time = document.querySelector("#time");
 const add = document.querySelector(".add");
 const remove = document.querySelector(".remove");
 const counterNumberDisplay = document.querySelector("[data-key='num']");
 const myOrder = document.querySelector(".myOrder");
+const time = document.querySelector("#time");
 const seat = document.querySelector("#seat");
 const paid = document.querySelector("#paid");
 const price = document.querySelector("#price");
@@ -111,6 +111,7 @@ function addData() {
     }
   }
   form.reset();
+  console.log(data);
   getData(data);
 }
 

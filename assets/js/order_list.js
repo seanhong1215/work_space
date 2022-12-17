@@ -1,6 +1,24 @@
+const date = document.querySelector('#editDate');
+const datepicker = new Datepicker(date, {
+  format: "yyyy-mm-dd",
+  buttonClass: 'btn',
+  defaultViewDate: 'today',
+  orientation: 'auto',
+  todayBtn: true
+});
+
 const orderList = document.querySelector(".order_list");
 const cancelBtn = document.querySelector(".btn-danger");
 const editBtn = document.querySelector(".btn-primary");
+const add = document.querySelector(".add");
+const remove = document.querySelector(".remove");
+const counterNumberDisplay = document.querySelector("[data-key='num']");
+const time = document.querySelector("#time");
+const seat = document.querySelector("#seat");
+const paid = document.querySelector("#paid");
+const price = document.querySelector("#price");
+const editConfirm = document.querySelector("[data-confirm='editBtn']");
+
 
 function init() {
     getData();
@@ -38,7 +56,8 @@ function renderData(data) {
           </ul>
         </div>
         <div class="col-12 col-md-12 col-lg-4 js-btn">
-          <button type="button" class="btn btn-danger" data-cancel="${item.id}">取消預約</button>
+          <button type="button" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" class="btn btn-primary me-3" data-edit="${item.id}">編輯</button>
+          <button type="button" class="btn btn-danger" data-cancel="${item.id}">取消</button>
         </div>
     </div>
   </div>
@@ -52,15 +71,37 @@ if(orderList.innerHTML === ""){
 }
 }
 
+// 預約數量加減
+let counterNumber = 0;
+let counterMultiplier = 1;
+
+add.addEventListener("click", function () {
+  counterNumber += 1 * counterMultiplier;
+  renderCounter(counterNumber);
+});
+remove.addEventListener("click", function () {
+  counterNumber -= 1 * counterMultiplier;
+  renderCounter(counterNumber);
+});
+
+function renderCounter(renderValue) {
+  counterNumberDisplay.value = renderValue;
+}
+
 orderList.addEventListener("click", function (e) {
+  const editId = e.target.getAttribute("data-edit");
   const id = e.target.getAttribute("data-cancel");
   if (id) {
     cancelOrder(id);
     return
-  } 
+  } else if(editId){
+    editOrder(editId);
+    return
+  }
 });
 
 function cancelOrder(id) {
+  console.log(id)
   Swal.fire({
     title: '確定要取消預約?',
     icon: 'warning',
@@ -84,5 +125,48 @@ function cancelOrder(id) {
         console.log(error);
       });
     }
+  })
+}
+
+function editOrder(id) {
+  console.log(id)
+  getEditData(id)
+}
+function getEditData (id) {
+  axios
+  .get(`${BASE_URL}/myOrders/${id}`)
+  .then((res) => {
+    let data = res.data;
+    time.value = data.time;
+    seat.value = data.seat;
+    paid.value = data.paid;
+    date.value = data.date;
+    counterNumberDisplay.value = data.number;
+    price.value = data.price;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+  updateOrder(id);
+}
+
+function updateOrder(id) {
+  editConfirm.addEventListener('click', function(e){
+    axios
+    .patch(`${BASE_URL}/myOrders/${id}`, {
+      time: time.value,
+      seat: seat.value,
+      paid: paid.value,
+      date: date.value,
+      number: counterNumberDisplay.value,
+      price: price.value,
+    })
+    .then((res) => {
+      console.log(res.data)
+      getData();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   })
 }

@@ -20,10 +20,12 @@ const save = document.querySelector(".save");
 
 function init() {
   getData(userId);
+  // getNewData(userId);
 }
 init();
 
-save.addEventListener("click", function () {
+save.addEventListener("click", function (e) {
+  console.log(e.target);
   axios
     .patch(`${BASE_URL}/settings/${userId}`, {
       email: account.value,
@@ -38,7 +40,7 @@ save.addEventListener("click", function () {
         title: "儲存成功",
         time: 3000
       })
-      updatePassword()
+      updatePassword();
     })
     .catch(function (error) {
       console.log(error);
@@ -50,13 +52,32 @@ function updatePassword(){
     password: userPassword.value
   })
   .then(function(res){
+    Swal.fire({
+      icon: "success",
+      title: "儲存成功",
+      time: 3000
+    })
     console.log(res.data)
+    getData();
   })
   .catcg(function(err){
     console.log(err)
   })
 }
 
+
+// function getNewData(id) {
+//   axios
+//     .get(`${BASE_URL}/users/${id}`)
+//     .then(function (response) {
+//       const data = response.data;
+//       account.value = data.email;
+//       profileImg.src = "https://seanhong1215.github.io/workspace/images/user.png";
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
 
 function getData(id) {
   axios

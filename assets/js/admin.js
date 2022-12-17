@@ -17,9 +17,6 @@ function saveUserToLocal({ accessToken, user }) {
 }
 
 
-
-
-
 function login() {
   const url = `${LOGIN_URL}`;
   const data = {
@@ -65,14 +62,15 @@ function login() {
           icon: "error",
           title: "此帳號不存在或帳號密碼錯誤",
         });
+        formLogin.reset();
       });
   } else {
     Swal.fire({
       icon: "error",
       title: "此帳號不存在或帳號密碼錯誤",
     });
-  }
   formLogin.reset();
+  }
 }
 
 function signup() {
@@ -93,6 +91,7 @@ function signup() {
           Swal.fire({
             icon: "success",
             title: "註冊成功",
+            confirmButtonText: "OK",
           }).then((result) => {
             if (result.isConfirmed) {
               window.location.replace("./login.html");
@@ -106,6 +105,7 @@ function signup() {
           title: "帳號註冊失敗！",
           icon: "error",
         });
+    formSignup.reset();
       });
     /*  end of axios */
   } else {
@@ -113,8 +113,8 @@ function signup() {
       title: "帳號註冊失敗！",
       icon: "error",
     });
+    formSignup.reset();
   }
-  formSignup.reset();
 }
 
 const constraints = {

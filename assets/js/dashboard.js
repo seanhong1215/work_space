@@ -101,7 +101,7 @@ function inits() {
 inits();
 
 function getData() {
-  axios.get(`${BASE_URL}/myOrders`).then((res) => {
+  axios.get(`${BASE_URL}/myOrders?_expand=user`).then((res) => {
     renderData(res.data);
   });
 }
@@ -121,6 +121,7 @@ function renderData(data) {
   data.forEach((item) => {
     str += `
           <div class="item">${item.id}</div>
+          <div class="item">${item.user.email}</div>
           <div class="item">${item.number}</div>
           <div class="item">${item.seat}</div>
           <div class="item">${item.paid}</div>
