@@ -10,7 +10,7 @@ const datepicker = new Datepicker(elem, {
 //個人資料
 const account = document.querySelector('input[type="email"]');
 const userName = document.querySelector("#userName");
-const phone = document.querySelector('input[type="number"]');
+const phone = document.querySelector('input[type="tel"]');
 const date = document.querySelector('input[name="foo"]');
 const userSubName = document.querySelector("#userSubName");
 const profile = document.querySelector("#profile");
