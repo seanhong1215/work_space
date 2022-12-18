@@ -8,14 +8,16 @@ const formLogin = document.querySelector(".js-form-login");
 //Signup
 const btnSignup = document.querySelector(".js-btn-signup");
 const formSignup = document.querySelector(".js-form-signup");
-
 const loginPages = document.querySelector(".js-login-pages");
+
+//
+const inputs = document.querySelectorAll("input[name]");
+
 
 function saveUserToLocal({ accessToken, user }) {
   localStorage.setItem("token", accessToken);
   localStorage.setItem("userId", user.id);
 }
-
 
 function login() {
   const url = `${LOGIN_URL}`;
@@ -117,6 +119,7 @@ function signup() {
   }
 }
 
+
 const constraints = {
   信箱: {
     presence: {
@@ -132,20 +135,12 @@ const constraints = {
       message: "必填欄位",
     },
   },
+  密碼確認: {
+    presence: {
+      message: "必填欄位",
+    },
+  },
 };
 
-const inputs = document.querySelectorAll("input[name]");
 
-inputs.forEach((item) => {
-  item.addEventListener("change", function () {
-    item.nextElementSibling.textContent = "";
-    let errors = validate(formLogin, constraints) || "";
-    if (errors) {
-      Object.keys(errors).forEach(function (keys) {
-        // console.log(document.querySelector(`[data-message=${keys}]`))
-        document.querySelector(`[data-message="${keys}"]`).textContent =
-          errors[keys];
-      });
-    }
-  });
-});
+

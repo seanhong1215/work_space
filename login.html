@@ -68,12 +68,20 @@
     <div class="container py-5">
       <form class="formControls js-form-login" action="POST">
         <h2 class="formControls_txt">登入</h2>
+        <div class="formGroup">
         <label class="formControls_label" for="exampleInputEmail1">Email</label>
-        <input class="formControls_input" type="text" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="請輸入 email" required>
-        <span data-message="信箱"></span>
+          <div class="inputWrap">
+            <input class="formControls_input" type="text" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="請輸入 email" required>
+            <p data-message="信箱"></p>
+          </div>
+        </div>
+        <div class="formGroup">
         <label class="formControls_label" for="exampleInputPassword1">密碼</label>
-        <input class="formControls_input" type="password" name="password" id="exampleInputPassword1" placeholder="請輸入密碼" required>
-        <span data-message="密碼"></span>
+          <div class="inputWrap">
+            <input class="formControls_input" type="password" name="password" id="exampleInputPassword1" placeholder="請輸入密碼" required>
+            <p data-message="密碼"></p>
+          </div>
+        </div>
         <input class="formControls_btnSubmit js-btn-login" type="button" value="登入">
         <a class="formControls_btnLink" href="./signup.html">註冊帳號</a>
     </form>
@@ -107,6 +115,30 @@ formLogin.addEventListener("keydown", function (e) {
     return;
   }
 });
+
+btnLogin.addEventListener("click", checkForm);
+      function checkForm() {
+        let errors = validate(formLogin, constraints) || "";
+        if (errors) {
+          Object.keys(errors).forEach(function (keys) {
+            document.querySelector(`[data-message="${keys}"]`).textContent =
+              errors[keys];
+          });
+        }
+      }
+      inputs.forEach((item) => {
+        console.log(item);
+        item.addEventListener("change", function () {
+          item.nextElementSibling.textContent = "";
+          let errors = validate(formLogin, constraints) || "";
+          if (errors) {
+            Object.keys(errors).forEach(function (keys) {
+              document.querySelector(`[data-message="${keys}"]`).textContent =
+                errors[keys];
+            });
+          }
+        });
+      });
   </script>
 </body>
 </html>
